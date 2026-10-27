@@ -52,12 +52,12 @@ export default function Navbar() {
     ];
   } else if (isUrbanSweets) {
     brandName = "URBAN SWEETS & BAKERS";
-    brandSub = "SWEETS • BAKERY • BANQUET";
+    brandSub = "RESTAURANT • ARTISANAL SWEETS • BANQUET";
     brandLogoLink = "/urban-sweets";
     buttonClass = "bg-[#581825] text-[#FAF6F0] border border-[#C4A46B] hover:bg-[#43121C]";
     directCallNumber = "";
     navLinks = [
-      { label: "Sweets & Bakery", href: "/urban-sweets/sweets-and-bakery" },
+      { label: "Restaurant & Sweets", href: "/urban-sweets/sweets-and-bakery" },
       { label: "Banquets", href: "/urban-sweets/banquets" },
       { label: "Contact", href: "/urban-sweets/contact" },
     ];
@@ -176,7 +176,7 @@ export default function Navbar() {
                         <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                       <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
-                        Artisanal Sweets, Gourmet Bakery, Gifting & Banquet Space
+                        Restaurant, Artisanal Sweets, Bakery &amp; Celebration Banquet
                       </p>
                     </Link>
 

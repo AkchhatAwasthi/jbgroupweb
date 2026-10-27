@@ -10,9 +10,9 @@ import EnquiryForm from "@/components/EnquiryForm";
 import { urbanSweetsData } from "@/data/urbanSweetsData";
 
 export const metadata = {
-  title: "Artisanal Sweets, Bakery & Gifting | Urban Sweets & Bakers",
+  title: "Restaurant Dining, Artisanal Sweets & Bakery | Urban Sweets & Bakers",
   description:
-    "Editorial product catalogue of handcrafted Indian mithai, European viennoiserie, custom celebration cakes, and festive gift hampers by Urban Sweets & Bakers.",
+    "Explore the culinary catalogue of Urban Sweets & Bakers: Multi-cuisine restaurant dining, authentic Lucknowi chaat, handcrafted pure desi ghee mithai, and festive gift hampers.",
 };
 
 export default function SweetsAndBakeryPage() {
@@ -21,37 +21,42 @@ export default function SweetsAndBakeryPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#3D0F18] text-[#FAF6F0] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex flex-col justify-between overflow-hidden bg-[#2D0A11] text-[#FAF6F0]">
+        {/* Full Visibility Hero Image */}
+        <div className="absolute inset-0">
           <Image
-            src="/images/urban-sweets/bakery.jpg"
-            alt="Artisanal Bakery Studio"
+            src="/images/urban-sweets/sweet_shop_counter.png"
+            alt="Urban Sweets Counter & Culinary Studio"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
+          {/* Subtle Vignettes - Center is 100% Radiant */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#2D0A11] via-[#2D0A11]/75 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top: Breadcrumb */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[
               { label: "Urban Sweets & Bakers", href: "/urban-sweets" },
-              { label: "Sweets, Bakery & Gifting" },
+              { label: "Restaurant, Sweets & Bakery" },
             ]}
             theme="maroon"
           />
+        </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B]">
-              Artisanal Atelier Catalogue
+        {/* Bottom: Minimal Punchy Title */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+          <div className="space-y-2 max-w-2xl">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+              Culinary &amp; Artisanal Atelier • Lucknow
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-tight">
-              Culinary Craftsmanship & Gifting Collections
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md">
+              Restaurant Dining, Artisanal Sweets &amp; Bakery
             </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
-              Explore our curated selections of pure desi ghee mithai, fresh morning viennoiserie, celebratory patisserie, and royal velvet gift hampers.
-            </p>
           </div>
         </div>
       </section>
@@ -159,7 +164,48 @@ export default function SweetsAndBakeryPage() {
           <p className="text-sm sm:text-base text-[#E7DFD1]/80 max-w-2xl mx-auto font-light leading-relaxed">
             Personalize your gifting with royal maroon velvet boxes, bespoke engraved monograms, customized assortment selections, and coordinated delivery.
           </p>
-          <div className="pt-2">
+          {/* Luxury Gifting Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 text-left">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl group">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/urban-sweets/luxury_gift_box_1.png"
+                  alt="Royal Velvet Heritage Box"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#DFCA9B]">Wedding &amp; VIP Special</span>
+                <h3 className="font-serif text-lg font-bold text-white mt-1">The Royal Heritage Velvet Box</h3>
+                <p className="text-xs text-[#E7DFD1]/80 mt-1 font-light leading-relaxed">
+                  Lined in maroon velvet with gold foil monograms, housing handcrafted artisanal sweets and exotic nuts.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl group">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/urban-sweets/luxury_gift_box_2.png"
+                  alt="Festive Jewel Drawer Hamper"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#DFCA9B]">Festive &amp; Corporate</span>
+                <h3 className="font-serif text-lg font-bold text-white mt-1">The Festive Jewel Drawer Trunk</h3>
+                <p className="text-xs text-[#E7DFD1]/80 mt-1 font-light leading-relaxed">
+                  Structured multi-tiered presentation with dry fruit confections, premium dates, and gourmet cookies.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4">
             <a
               href="#enquire"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#DFCA9B] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl"

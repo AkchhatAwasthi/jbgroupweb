@@ -24,36 +24,43 @@ export default function CelebrationsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-[#252522] text-[#F7F3EB] overflow-hidden">
-        <div className="absolute inset-0 opacity-25">
+      <section className="relative min-h-[55vh] sm:min-h-[64vh] flex flex-col justify-between overflow-hidden bg-[#1F2119] text-[#F7F3EB]">
+        {/* Full Visibility Hero Image - Genuine Cloudinary Celebration Grounds */}
+        <div className="absolute inset-0">
           <Image
-            src="/images/group/celebrations.jpg"
-            alt="JB Group Celebrations"
+            src="/images/innovation/DSC_2102.jpg"
+            alt="JB Group Celebrations & Landmark Occasions"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
+          {/* Subtle Vignettes - Center is 100% Radiant */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#1F2119] via-[#1F2119]/80 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top: Breadcrumb */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[{ label: "Celebrations & Banquets" }]}
             theme="charcoal"
           />
+        </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
-              Celebrations & Landmark Occasions
-            </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-tight">
-              Where Every Occasion Finds Its Perfect Stage
-            </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
-              From grand wedding pheras on expansive lawns to intimate rooftop sunset cocktail mixers with LED walls and silver-service banquets, discover Lucknow&apos;s most versatile celebration destinations.
-            </p>
+        {/* Bottom: Minimal Punchy Title & Action Buttons */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+                Celebrations &amp; Landmark Occasions • JB Group
+              </span>
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md">
+                Where Every Occasion Finds Its Perfect Stage
+              </h1>
+            </div>
 
-            <div className="pt-4 flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="#all-venues"
                 className="px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all shadow-md"
@@ -62,9 +69,9 @@ export default function CelebrationsPage() {
               </a>
               <a
                 href="#enquire"
-                className="px-6 py-3 bg-white/10 border border-[#C4A46B]/40 text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white/20 transition-all backdrop-blur-sm"
+                className="px-6 py-3 bg-black/50 border border-[#C4A46B]/40 text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-black/70 transition-all backdrop-blur-sm"
               >
-                Check Date Availability
+                Plan Your Event
               </a>
             </div>
           </div>
@@ -80,64 +87,96 @@ export default function CelebrationsPage() {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white border border-[#E7DFD1] p-6 rounded-sm shadow-sm space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-              Weddings & Receptions
-            </span>
-            <h3 className="font-serif text-xl font-bold text-[#252522]">
-              Grand Matrimonials
-            </h3>
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C4A46B] block">
+                Weddings &amp; Receptions
+              </span>
+              <h3 className="font-serif text-xl font-bold text-[#252522]">
+                Grand Matrimonials
+              </h3>
+            </div>
             <p className="text-xs text-[#73765B] font-light leading-relaxed">
-              Expansive green lawns, grand ballrooms with chandeliers, dedicated guest accommodations, and Mandap architecture.
+              Expansive green lawns, grand ballrooms with chandeliers, dedicated bridal accommodations, and architectural Mandap staging.
             </p>
-            <span className="text-[11px] text-[#252522] font-semibold block pt-2">
-              Recommended: JB Innovation (Crown / Kanishk / Lawns)
-            </span>
+            <div className="pt-3 border-t border-[#E7DFD1]/60">
+              <span className="text-[11px] text-[#252522] font-semibold block">
+                Venue: JB Innovation
+              </span>
+              <span className="text-[10px] text-[#73765B]">Crown • Kanishk • Celebration Lawns</span>
+            </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 rounded-sm shadow-sm space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-              Pre-Wedding Rituals
-            </span>
-            <h3 className="font-serif text-xl font-bold text-[#252522]">
-              Mehndi, Haldi & Sangeet
-            </h3>
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+              <Calendar className="w-4 h-4" />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C4A46B] block">
+                Pre-Wedding Rituals
+              </span>
+              <h3 className="font-serif text-xl font-bold text-[#252522]">
+                Mehndi, Haldi &amp; Sangeet
+              </h3>
+            </div>
             <p className="text-xs text-[#73765B] font-light leading-relaxed">
-              Open rooftop terraces with panoramic skyline views, customizable boho/ethnic floral canopies, and energetic sound stages.
+              Open rooftop terraces with panoramic skyline views, customizable ethnic floral canopies, and energetic sound stages.
             </p>
-            <span className="text-[11px] text-[#252522] font-semibold block pt-2">
-              Recommended: Open Terraces at Skyhilton & Innovation
-            </span>
+            <div className="pt-3 border-t border-[#E7DFD1]/60">
+              <span className="text-[11px] text-[#252522] font-semibold block">
+                Venue: Open Terraces
+              </span>
+              <span className="text-[10px] text-[#73765B]">Skyhilton Terrace • Innovation Rooftop</span>
+            </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 rounded-sm shadow-sm space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-              Corporate & Conclaves
-            </span>
-            <h3 className="font-serif text-xl font-bold text-[#252522]">
-              Conferences & Galas
-            </h3>
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+              <Users className="w-4 h-4" />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C4A46B] block">
+                Corporate &amp; Conclaves
+              </span>
+              <h3 className="font-serif text-xl font-bold text-[#252522]">
+                Conferences &amp; Galas
+              </h3>
+            </div>
             <p className="text-xs text-[#73765B] font-light leading-relaxed">
-              Integrated Big LED walls, professional acoustics, discrete VIP meeting dining, and executive accommodation blocks.
+              Integrated Big LED walls, professional acoustics, discreet VIP dining chambers, and executive guest accommodation.
             </p>
-            <span className="text-[11px] text-[#252522] font-semibold block pt-2">
-              Recommended: JB Skyhilton (Infinity & VIP) & Innovation
-            </span>
+            <div className="pt-3 border-t border-[#E7DFD1]/60">
+              <span className="text-[11px] text-[#252522] font-semibold block">
+                Venue: JB Skyhilton &amp; Innovation
+              </span>
+              <span className="text-[10px] text-[#73765B]">Infinity Hall • VIP Hall • Crown Hall</span>
+            </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 rounded-sm shadow-sm space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-              Family Milestones
-            </span>
-            <h3 className="font-serif text-xl font-bold text-[#252522]">
-              Birthdays & Anniversaries
-            </h3>
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+              <MapPin className="w-4 h-4" />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#C4A46B] block">
+                Family Milestones
+              </span>
+              <h3 className="font-serif text-xl font-bold text-[#252522]">
+                Birthdays &amp; Anniversaries
+              </h3>
+            </div>
             <p className="text-xs text-[#73765B] font-light leading-relaxed">
-              Intimate celebratory settings with signature North Indian cuisine, live chaat and artisanal desserts by Urban Sweets.
+              Intimate celebratory settings with signature North Indian cuisine, live chaat atelier, and artisanal desserts by Urban Sweets.
             </p>
-            <span className="text-[11px] text-[#252522] font-semibold block pt-2">
-              Recommended: Urban Sweets Banquet & Skyhilton Upper Deck
-            </span>
+            <div className="pt-3 border-t border-[#E7DFD1]/60">
+              <span className="text-[11px] text-[#252522] font-semibold block">
+                Venue: Urban Sweets &amp; Skyhilton
+              </span>
+              <span className="text-[10px] text-[#73765B]">Celebration Banquet • Upper Deck</span>
+            </div>
           </div>
         </div>
       </section>
@@ -250,13 +289,33 @@ export default function CelebrationsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <VenueCard
                 name="Urban Sweets Celebration Banquet"
-                setting="Intimate Indoor Hall with Live Confectionery Catering"
+                setting="Intimate Indoor Hall & Artisanal Catering"
                 headline={urbanSweetsData.banquetVenue.headline}
                 description={urbanSweetsData.banquetVenue.description}
                 capacityNote={urbanSweetsData.banquetVenue.noteOnCapacities}
                 features={urbanSweetsData.banquetVenue.features}
                 suitableEvents={urbanSweetsData.banquetVenue.suitableEvents}
                 image={urbanSweetsData.banquetVenue.heroImage}
+                enquireHref="#enquire"
+              />
+              <VenueCard
+                name="Urban Sweets Terrace & Dining"
+                setting="Open Terrace Dining & Live Chaat Atelier"
+                headline="Freshly Crafted Delights for Family Milestones"
+                description="A vibrant setting pairing open-air terrace seating with interactive live chaat counters, pure desi ghee delicacies, tandoori specialties, and gourmet celebration cakes."
+                features={[
+                  "Open-air terrace dining presentation",
+                  "Interactive live chaat & tandoor live counters",
+                  "Pure desi ghee mithai & European patisserie",
+                  "Customized family celebratory dining setups",
+                ]}
+                suitableEvents={[
+                  "Family Milestone Celebrations",
+                  "Festive Gatherings & Sundowners",
+                  "Roka & Ring Ceremonies",
+                  "Corporate Team Milestone Dinners",
+                ]}
+                image="/images/urban-sweets/terrace_dining_spread.png"
                 enquireHref="#enquire"
               />
             </div>

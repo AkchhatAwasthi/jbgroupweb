@@ -35,19 +35,24 @@ export default function SkyhiltonRoomsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#252522] text-[#F7F3EB] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex flex-col justify-between overflow-hidden bg-[#241119] text-[#F7F3EB]">
+        {/* Full Visibility Hero Image */}
+        <div className="absolute inset-0">
           <Image
             src="/images/skyhilton/suite_retreat.png"
-            alt="JB Skyhilton Inn Accommodation"
+            alt="JB Skyhilton Inn Boutique Accommodations"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
+          {/* Subtle Vignettes - Center is 100% Radiant */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#241119] via-[#241119]/75 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top: Breadcrumb */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[
               { label: "JB Skyhilton", href: "/skyhilton" },
@@ -55,17 +60,31 @@ export default function SkyhiltonRoomsPage() {
             ]}
             theme="charcoal"
           />
+        </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
-              JB Skyhilton Inn • 27 Rooms
-            </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-tight">
-              Boutique Comfort & Modern Amenities
-            </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
-              We have 27 tastefully done up rooms of different categories equipped with direct dial telephones, high-speed internet access, television, tea and coffee making facilities, and all necessary guest amenities.
-            </p>
+        {/* Bottom: Minimal Punchy Title & Key Info */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
+            <div className="space-y-2">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#CCA08A] block">
+                JB Skyhilton Inn • 27 Boutique Keys
+              </span>
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF7F5] leading-tight drop-shadow-md">
+                Boutique Comfort &amp; Modern Luxury
+              </h1>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-3.5 py-1.5 bg-black/50 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md">
+                High-Speed Wi-Fi
+              </span>
+              <span className="px-3.5 py-1.5 bg-black/50 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md">
+                In-Room Dining
+              </span>
+              <span className="px-3.5 py-1.5 bg-black/50 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md">
+                Complimentary Breakfast
+              </span>
+            </div>
           </div>
         </div>
       </section>

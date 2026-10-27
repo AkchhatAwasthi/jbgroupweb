@@ -23,19 +23,24 @@ export default function UrbanSweetsBanquetsPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#3D0F18] text-[#FAF6F0] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex flex-col justify-between overflow-hidden bg-[#2D0A11] text-[#FAF6F0]">
+        {/* Full Visibility Hero Image */}
+        <div className="absolute inset-0">
           <Image
-            src="/images/urban-sweets/banquet.jpg"
+            src="/images/urban-sweets/banquet_hall_2.jpg"
             alt="Urban Sweets Celebration Banquet"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
+          {/* Subtle Vignettes - Center is 100% Radiant */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#2D0A11] via-[#2D0A11]/75 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top: Breadcrumb */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[
               { label: "Urban Sweets & Bakers", href: "/urban-sweets" },
@@ -43,17 +48,17 @@ export default function UrbanSweetsBanquetsPage() {
             ]}
             theme="maroon"
           />
+        </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B]">
-              Private Celebrations Venue
+        {/* Bottom: Minimal Punchy Title */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+          <div className="space-y-2 max-w-2xl">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+              Private Celebrations Venue • Urban Sweets
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md">
               An Intimate Banquet for Life&apos;s Cherished Milestones
             </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
-              Warm celebratory lighting, royal maroon drapery, and artisanal culinary catering from both our sweets and bakery ateliers.
-            </p>
           </div>
         </div>
       </section>
@@ -73,7 +78,7 @@ export default function UrbanSweetsBanquetsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
             <Image
-              src="/images/urban-sweets/banquet.jpg"
+              src="/images/urban-sweets/banquet_hall_1.jpg"
               alt="Urban Sweets Banquet Hall Setting"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -145,6 +150,95 @@ export default function UrbanSweetsBanquetsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Banquet Photo Gallery Showcase */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <SectionHeading
+          eyebrow="Hall & Atmosphere"
+          title="Inside Urban Sweets Banquet"
+          description="Explore our grand banquet setting, illuminated by crystal chandeliers, regal seating layouts, and festive decor."
+        />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_1.jpg"
+              alt="Grand Banquet Hall Setting"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Grand Celebration Hall</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_2.jpg"
+              alt="Celebration Setup with Crystal Chandeliers"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Ambient Chandelier Illumination</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_setup_1.jpg"
+              alt="Stage Backdrop and Banquet Seating"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Custom Stage &amp; Seating Layout</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_3.jpg"
+              alt="Intimate Dining View"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Velvet Drapery &amp; Dining</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_4.jpg"
+              alt="Full Hall Perspective"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Warm Celebration Space</span>
+            </div>
+          </div>
+
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_5.jpg"
+              alt="Reception and Event Setting"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <span className="text-xs font-semibold text-white">Gathering &amp; Dining Hall</span>
+            </div>
           </div>
         </div>
       </section>

@@ -227,10 +227,11 @@ export const skyhiltonData = {
         "Integrated audio system and stage options",
         "Customized tandoori & biryani banquet menus",
       ],
-      heroImage: "/images/skyhilton/infinity_hall.png",
+      heroImage: "/images/skyhilton/courtyard_dining_atrium.png",
       galleryImages: [
-        "/images/skyhilton/infinity_hall.png",
-        "/images/skyhilton/infinity_buffet.png",
+        "/images/skyhilton/courtyard_dining_atrium.png",
+        "/images/skyhilton/courtyard_dining.png",
+        "/images/skyhilton/restaurant_botanical.png",
       ],
     },
     {
@@ -282,10 +283,11 @@ export const skyhiltonData = {
         "Plush executive decor and acoustic privacy",
         "Configurable for sit-down dinner or lounge meeting",
       ],
-      heroImage: "/images/skyhilton/vip_hall.png",
+      heroImage: "/images/skyhilton/bar_wooden_lounge.png",
       galleryImages: [
-        "/images/skyhilton/vip_hall.png",
-        "/images/skyhilton/vip_dining.png",
+        "/images/skyhilton/bar_wooden_lounge.png",
+        "/images/skyhilton/bar_neon_lounge.png",
+        "/images/skyhilton/elite_lounge.png",
       ],
     },
     {
@@ -308,10 +310,11 @@ export const skyhiltonData = {
         "Open-air breeze with designer shade structures",
         "Specialty gourmet cocktail catering",
       ],
-      heroImage: "/images/skyhilton/upper_deck.png",
+      heroImage: "/images/skyhilton/bar_rooftop_lounge.png",
       galleryImages: [
-        "/images/skyhilton/upper_deck.png",
+        "/images/skyhilton/bar_rooftop_lounge.png",
         "/images/skyhilton/bar_wooden_lounge.png",
+        "/images/skyhilton/rooftop_terrace.png",
       ],
     },
   ] as SkyhiltonBanquetVenue[],

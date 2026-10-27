@@ -24,19 +24,24 @@ export default function InnovationAccommodationPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-[#2D3025] text-[#F7F3EB] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative min-h-[52vh] sm:min-h-[60vh] flex flex-col justify-between overflow-hidden bg-[#1F2119] text-[#F7F3EB]">
+        {/* Full Visibility Hero Image */}
+        <div className="absolute inset-0">
           <Image
-            src="/images/innovation/rooms_hero.png"
-            alt="JB Innovation Luxury Guest Accommodation"
+            src="/images/innovation/DSC_9767.jpg"
+            alt="JB Innovation Luxury Guest Accommodation Suite"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
+          {/* Subtle Vignettes - Center is 100% Radiant */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#1F2119] via-[#1F2119]/75 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top: Breadcrumb */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[
               { label: "JB Innovation", href: "/jb-innovation" },
@@ -44,17 +49,28 @@ export default function InnovationAccommodationPage() {
             ]}
             theme="charcoal"
           />
+        </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
-              Guest Rooms & Suites
-            </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-tight">
-              Experience Luxury & Comfort
-            </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
-              Our premium rooms are a sanctuary of sophistication, combining modern amenities with timeless charm. Curated for wedding hosts, families, and discerning guests.
-            </p>
+        {/* Bottom: Minimal Punchy Title & Room Quick Info */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
+            <div className="space-y-2">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+                Guest Rooms &amp; Suites
+              </span>
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md">
+                Experience Luxury &amp; Comfort
+              </h1>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-3.5 py-1.5 bg-black/50 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md">
+                Deluxe Room (180 Sq Ft)
+              </span>
+              <span className="px-3.5 py-1.5 bg-black/50 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md">
+                Executive Room (250 Sq Ft with Lounge)
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -104,12 +120,20 @@ export default function InnovationAccommodationPage() {
 
           <div className="lg:col-span-6 relative aspect-[16/11] rounded-sm overflow-hidden shadow-2xl">
             <Image
-              src="/images/innovation/room_executive.png"
-              alt="JB Innovation Executive Room with Lounge"
+              src="/images/innovation/DSC_0747.jpg"
+              alt="JB Innovation Executive Room with Dedicated Lounge Area"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
+            <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md px-3 py-2 rounded-sm text-white">
+              <span className="text-xs font-semibold text-[#DFCA9B] block">
+                Executive Room (250 Sq Ft)
+              </span>
+              <span className="text-[11px] text-white/80 font-light block">
+                Features integrated leather sectional sofa lounge & media console
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -137,6 +161,68 @@ export default function InnovationAccommodationPage() {
                 enquireHref="#enquire"
               />
             ))}
+          </div>
+
+          {/* Real Room Photography Showcase */}
+          <div className="pt-8 border-t border-[#E7DFD1]">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#73765B]">
+                Authentic Photography
+              </span>
+              <h3 className="font-serif text-2xl font-bold text-[#252522] mt-1">
+                Explore Our Rooms & Living Spaces
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+                <Image
+                  src="/images/innovation/DSC_0747.jpg"
+                  alt="Executive Room Living Lounge"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                  <div>
+                    <span className="text-xs font-bold text-[#DFCA9B] block">Executive Suite Lounge</span>
+                    <span className="text-[11px] text-white/80">L-shaped leather sofa & coffee table</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+                <Image
+                  src="/images/innovation/DSC_0739.jpg"
+                  alt="Deluxe Room Modern Interior"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                  <div>
+                    <span className="text-xs font-bold text-[#DFCA9B] block">Deluxe Bedroom Sanctuary</span>
+                    <span className="text-[11px] text-white/80">Warm wooden wall panelling & plush bed</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+                <Image
+                  src="/images/innovation/DSC_9767.jpg"
+                  alt="Tufted King Bedroom"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+                  <div>
+                    <span className="text-xs font-bold text-[#DFCA9B] block">Guest Bedroom Suite</span>
+                    <span className="text-[11px] text-white/80">Tufted headboard & ambient lighting</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

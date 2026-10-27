@@ -22,6 +22,9 @@ import SectionHeading from "@/components/SectionHeading";
 import VenueCard from "@/components/VenueCard";
 import RoomCard from "@/components/RoomCard";
 import EnquiryForm from "@/components/EnquiryForm";
+import InnovationGallery from "@/components/InnovationGallery";
+import InnovationVenuesSlider from "@/components/InnovationVenuesSlider";
+import VideoShowcase from "@/components/VideoShowcase";
 import { innovationData } from "@/data/innovationData";
 
 export const metadata = {
@@ -36,154 +39,171 @@ export default function InnovationHomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#2D3025]">
+      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#1F2119]">
+        {/* Full Visibility Hero Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/innovation/hero.png"
-            alt="JB Innovation Grand Wedding & Event Destination"
+            src="/images/innovation/grand_jali_entrance.png"
+            alt="JB Innovation Grand Jali Palace Facade"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center scale-105"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#252522] via-[#2D3025]/60 to-black/40" />
+          {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Brilliant */}
+          <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-72 sm:h-88 bg-gradient-to-t from-[#1F2119] via-[#1F2119]/70 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#F7F3EB] pt-24 pb-16">
+        {/* Top: Clean Breadcrumb Bar */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[{ label: "JB Innovation" }]}
             theme="charcoal"
           />
+        </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C4A46B]/40 text-xs tracking-[0.25em] uppercase text-[#DFCA9B] font-medium mt-6 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#C4A46B]" />
-            <span>Grand Wedding & Celebration Destination • Lucknow</span>
-          </div>
+        {/* Bottom: Minimal, High-Impact Visual Anchor */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#C4A46B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
+                <Sparkles className="w-3 h-3 text-[#C4A46B]" />
+                <span>Grand Wedding & Celebration Destination • Lucknow</span>
+              </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#F7F3EB] leading-[1.1] mb-6">
-            Where Every Celebration <br className="hidden sm:inline" />
-            <span className="italic font-normal font-serif text-[#C4A46B]">
-              Finds Its Setting.
-            </span>
-          </h1>
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-[1.15] drop-shadow-lg">
+                Where Every Celebration{" "}
+                <span className="italic font-normal font-serif text-[#DFCA9B]">
+                  Finds Its Setting.
+                </span>
+              </h1>
+            </div>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg font-light text-[#E7DFD1] leading-relaxed mb-10">
-            {innovationData.subheadline}
-          </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/jb-innovation/venues"
+                className="px-6 sm:px-8 py-3.5 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+              >
+                <PartyPopper className="w-4 h-4" />
+                <span>Explore Venues</span>
+              </Link>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/jb-innovation/venues"
-              className="w-full sm:w-auto px-8 py-3.5 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all shadow-xl flex items-center justify-center gap-2"
-            >
-              <PartyPopper className="w-4 h-4" />
-              <span>Explore Our Venues</span>
-            </Link>
-
-            <a
-              href="#enquire"
-              className="w-full sm:w-auto px-8 py-3.5 bg-white/10 hover:bg-white/20 text-[#F7F3EB] border border-[#C4A46B]/40 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <span>Enquire About Your Event</span>
-            </a>
+              <a
+                href="#enquire"
+                className="px-6 sm:px-8 py-3.5 bg-black/50 hover:bg-black/70 text-[#F7F3EB] border border-[#C4A46B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+              >
+                <span>Enquire Now</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Overview & Tradition */}
-      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* Overview & Philosophy - Clean, Elegant Luxury Layout */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          {/* Left Column: Refined Editorial & Minimal Highlights */}
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
-              Destination Philosophy
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-tight">
-              Where Elegance Meets Tradition & Comfort Blends with Luxury
-            </h2>
-            <div className="h-0.5 w-16 bg-[#C4A46B]" />
+            <div className="inline-flex items-center gap-2">
+              <span className="w-6 h-[1.5px] bg-[#C4A46B]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
+                Destination Philosophy
+              </span>
+            </div>
 
-            <p className="text-base text-[#252522]/80 font-light leading-relaxed">
-              {innovationData.overview.paragraph1}
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-[1.15]">
+              Where Elegance Meets Tradition &amp; Comfort Blends with Luxury
+            </h2>
+
+            <p className="text-sm sm:text-base text-[#252522]/80 font-light leading-relaxed">
+              Nestled amidst expansive green celebration lawns and adorned with regal banquet halls, JB Innovation is Lucknow’s premier destination for weddings, galas, and life’s most cherished celebrations.
             </p>
-            <p className="text-base text-[#252522]/80 font-light leading-relaxed">
-              {innovationData.overview.paragraph2}
-            </p>
-            <p className="text-base text-[#252522]/80 font-light leading-relaxed">
-              {innovationData.overview.paragraph3}
-            </p>
+
+            {/* Clean Minimal Stat Strip (Zero Clunky Card Boxes) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#E7DFD1]">
+              <div>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">4</span>
+                <span className="text-xs font-semibold text-[#252522] block mt-0.5">Venues</span>
+                <span className="text-[10px] text-[#73765B]">Halls &amp; Lawns</span>
+              </div>
+              <div>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">2</span>
+                <span className="text-xs font-semibold text-[#252522] block mt-0.5">Room Types</span>
+                <span className="text-[10px] text-[#73765B]">Deluxe &amp; Executive</span>
+              </div>
+              <div>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">Dining</span>
+                <span className="text-xs font-semibold text-[#252522] block mt-0.5">Carnations</span>
+                <span className="text-[10px] text-[#73765B]">Refined Restaurant</span>
+              </div>
+              <div>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">5.3 km</span>
+                <span className="text-xs font-semibold text-[#252522] block mt-0.5">Airport</span>
+                <span className="text-[10px] text-[#73765B]">CCS Airport Transit</span>
+              </div>
+            </div>
 
             <div className="pt-2">
               <Link
                 href="/jb-innovation/venues"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#73765B] hover:text-[#5C5F47] transition-colors border-b border-[#73765B] pb-1"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-md group"
               >
-                <span>Discover All Halls & Lawns</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Discover All Halls &amp; Lawns</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl">
+          {/* Right Column: Balanced 2-Photo Luxury Duet (Equal Height, No Clutter) */}
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
               <Image
-                src="/images/innovation/crown_hall.png"
-                alt="Crown Hall Banquet"
+                src="/images/innovation/DSC_2803.jpg"
+                alt="Crown Hall Grand Crystal Chandelier Banquet"
                 fill
-                sizes="25vw"
-                className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-            </div>
-            <div className="space-y-4 pt-8">
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
-                <Image
-                  src="/images/innovation/kanishk_hall.png"
-                  alt="Kanishk Hall Marble Ballroom"
-                  fill
-                  sizes="25vw"
-                  className="object-cover"
-                />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs uppercase tracking-wider text-[#DFCA9B] font-semibold">
+                  Crown Hall Ballroom
+                </span>
               </div>
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
-                <Image
-                  src="/images/innovation/lawns_banquets.png"
-                  alt="Lush Celebratory Lawns"
-                  fill
-                  sizes="25vw"
-                  className="object-cover"
-                />
+            </div>
+
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+              <Image
+                src="/images/innovation/DSC_1977.jpg"
+                alt="Triple Arch Royal Wedding Stage"
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs uppercase tracking-wider text-[#DFCA9B] font-semibold">
+                  Royal Wedding Stage
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Venues Spotlight */}
-      <section className="py-24 bg-[#252522] text-[#F7F3EB]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Celebration Venues"
-            title="Four Majestic Settings"
-            description="Crown Hall, Kanishk Hall, landscaped celebration lawns, and panoramic open rooftop terrace."
-            theme="dark"
-          />
+      {/* Venues Spotlight - All 4 Banquets in One Line with Slider */}
+      <InnovationVenuesSlider />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {innovationData.venues.map((venue) => (
-              <VenueCard
-                key={venue.id}
-                name={venue.name}
-                setting={venue.setting}
-                headline={venue.headline}
-                description={venue.description}
-                features={venue.features}
-                suitableEvents={venue.suitableEvents}
-                image={venue.heroImage}
-                enquireHref="#enquire"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Real Photography & Wedding Showcase */}
+      <InnovationGallery />
+
+      {/* Dedicated Video Showcase - Property Reels */}
+      <VideoShowcase
+        eyebrow="Cinematic Experience"
+        title="Celebrations in Motion"
+        description="Step inside our fairytale lawns, grand banquet halls, and celebrations captured live at JB Innovation."
+        theme="light"
+        showLinkToVenues={true}
+      />
 
       {/* Accommodation & Dining Quick Highlight */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -192,8 +212,8 @@ export default function InnovationHomePage() {
           <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
-                src="/images/innovation/room_deluxe.png"
-                alt="JB Innovation Deluxe Room"
+                src="/images/innovation/DSC_0747.jpg"
+                alt="JB Innovation Executive Suite with Lounge Area"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

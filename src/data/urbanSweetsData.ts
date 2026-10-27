@@ -15,10 +15,11 @@ export interface SweetsCategory {
 
 export const urbanSweetsData = {
   brandName: "Urban Sweets & Bakers",
-  tagline: "Made for Sweet Moments.",
+  tagline: "Restaurant • Artisanal Sweets • Bakery • Banquets",
   subheadline:
-    "An artisanal destination celebrating pure handcrafted sweets, gourmet bakery creations, bespoke gifting, and an intimate celebration banquet space.",
-  heroImage: "/images/urban-sweets/mithai.jpg",
+    "A premier culinary destination in Lucknow featuring a multi-cuisine family restaurant, pure handcrafted artisanal sweets, European-style bakery creations, bespoke luxury gifting, and an intimate celebration banquet space.",
+  heroImage: "/images/urban-sweets/sweet_shop_counter.png",
+  restaurantImage: "/images/urban-sweets/restaurant_dining_1.jpg",
   theme: {
     maroon: "#581825",
     cream: "#FAF6F0",
@@ -27,20 +28,35 @@ export const urbanSweetsData = {
   overview: {
     title: "About Urban Sweets & Bakers",
     paragraph1:
-      "At Urban Sweets & Bakers, we believe that life's sweetest milestones deserve extraordinary craftsmanship. Rooted in culinary tradition and elevated by contemporary pastry artistry, our creations bring joy to family tables and grand celebrations alike.",
+      "At Urban Sweets & Bakers, we believe that life's sweetest milestones and shared meals deserve extraordinary craftsmanship. Rooted in culinary tradition and elevated by contemporary pastry and culinary arts, our establishment serves as a complete destination for fine dining, traditional confections, and memorable private celebrations.",
     paragraph2:
-      "From time-honored Indian mithai made with pure ingredients to European-inspired artisanal bakery loaves, delicate patisserie, bespoke festive hampers, and an intimate banquet hall for family gatherings, every detail is crafted to leave a lasting impression.",
+      "From savory North Indian curries, tandoori delicacies, and vibrant street chaat in our family restaurant, to European-inspired artisanal bakery loaves, 100% pure desi ghee mithai, bespoke festive hampers, and an intimate banquet hall for milestone gatherings, every detail is crafted to leave a lasting impression.",
     complianceNote:
-      "Detailed brochure specifications for Urban Sweets & Bakers are currently being curated. Detailed menus, product catalogs, and banquet capacities can be customized directly upon enquiry.",
+      "Detailed brochure specifications for Urban Sweets & Bakers are currently being curated. Detailed restaurant menus, seasonal sweets catalogs, and banquet capacities can be customized directly upon enquiry.",
   },
   offerings: [
+    {
+      id: "restaurant",
+      title: "Multi-Cuisine Family Restaurant",
+      headline: "Authentic North Indian Flavors, Tandoor & Live Chaat",
+      description:
+        "A warm, sophisticated dining ambiance serving rich North Indian curries, clay-oven tandoori breads and kebabs, authentic street chaat, and chef-curated family meals.",
+      image: "/images/urban-sweets/restaurant_dining_1.jpg",
+      route: "/urban-sweets#restaurant",
+      highlights: [
+        "Rich North Indian Curries & Tandoor",
+        "Live Street Chaat & Snack Counter",
+        "Family-Friendly Ambient Seating",
+        "Fresh Chef-Curated Vegetarian Delights",
+      ],
+    },
     {
       id: "sweets",
       title: "Artisanal Sweets & Mithai",
       headline: "Traditional Craftsmanship, Refined for Today",
       description:
-        "Crafted using time-tested recipes, pure desi ghee, premium pistachios, saffron, and almonds. Each confection balances heritage flavor with delicate modern presentation.",
-      image: "/images/urban-sweets/mithai.jpg",
+        "Crafted using time-tested recipes, 100% pure desi ghee, premium pistachios, saffron, and almonds. Each confection balances heritage flavor with delicate modern presentation.",
+      image: "/images/urban-sweets/sweet_shop_interior_display.png",
       route: "/urban-sweets/sweets-and-bakery#sweets",
       highlights: [
         "Pure Desi Ghee Confections",
@@ -50,59 +66,79 @@ export const urbanSweetsData = {
       ],
     },
     {
-      id: "bakery",
-      title: "Gourmet Bakery & Patisserie",
-      headline: "Artisan Breads, Flaky Pastries & Signature Cakes",
-      description:
-        "Freshly baked daily, our bakery blends French patisserie techniques with crowd-pleasing flavors. From flaky croissants and artisan sourdough to celebration cakes.",
-      image: "/images/urban-sweets/bakery.jpg",
-      route: "/urban-sweets/sweets-and-bakery#bakery",
-      highlights: [
-        "Handcrafted Celebration Cakes",
-        "French Butter Croissants & Danishes",
-        "Artisan Sourdough & Specialty Loaves",
-        "Tea Cakes, Tarts & Gourmet Cookies",
-      ],
-    },
-    {
-      id: "gifting",
-      title: "Festive & Corporate Gifting",
-      headline: "Bespoke Hampers in Velvet & Gold",
-      description:
-        "Make your festive greetings and corporate appreciation memorable. Our custom gift hampers feature royal maroon velvet boxes, gold foil monograms, and curated combinations.",
-      image: "/images/urban-sweets/gifting.jpg",
-      route: "/urban-sweets/sweets-and-bakery#gifting",
-      highlights: [
-        "Royal Velvet & Silk Keepsake Packaging",
-        "Custom Corporate Branding & Monograms",
-        "Curated Mithai, Roasted Nuts & Fine Teas",
-        "Nationwide Bulk Delivery Coordination",
-      ],
-    },
-    {
       id: "banquets",
       title: "Celebration Banquet Venue",
       headline: "Intimate Occasions, Warm Atmosphere & Delightful Food",
       description:
-        "Urban Sweets & Bakers houses a dedicated banquet venue perfect for family milestone dinners, birthday celebrations, baby showers, and intimate festive gatherings.",
-      image: "/images/urban-sweets/banquet.jpg",
+        "A dedicated private banquet space tailored for family milestone celebrations, birthdays, anniversaries, roka ceremonies, and festive gatherings with live in-house catering.",
+      image: "/images/urban-sweets/banquet_hall_1.jpg",
       route: "/urban-sweets/banquets",
       highlights: [
         "Intimate indoor celebration setting",
-        "Warm celebratory lighting and elegant drapery",
-        "In-house live sweets & gourmet catering",
-        "Audio and celebration setup assistance",
+        "Live catering from in-house restaurant kitchen",
+        "Warm celebratory lighting & regal decor",
+        "Dedicated banquet team & audiovisual support",
+      ],
+    },
+    {
+      id: "bakery",
+      title: "Gourmet Bakery & Gifting",
+      headline: "Artisan Breads, Flaky Pastries & Luxury Hampers",
+      description:
+        "Freshly baked daily, our bakery blends French patisserie techniques with celebration cakes, viennoiserie, sourdough loaves, and bespoke velvet gifting hampers.",
+      image: "/images/urban-sweets/luxury_gift_box_1.png",
+      route: "/urban-sweets/sweets-and-bakery#bakery",
+      highlights: [
+        "Handcrafted Celebration Cakes",
+        "French Butter Croissants & Breads",
+        "Royal Velvet & Gold Gift Hampers",
+        "Corporate & Festive Bulk Orders",
       ],
     },
   ],
   categories: [
+    {
+      id: "restaurant-menu",
+      title: "Restaurant Dining & Gourmet Savories",
+      subtitle: "North Indian Curries, Tandoor & Signature Chaat",
+      description:
+        "Prepared fresh in our hygienic kitchens using pure spices, cold-pressed oils, and farm-fresh ingredients for an unforgettable family meal.",
+      image: "/images/urban-sweets/food_dish_1.jpg",
+      isPlaceholderData: true,
+      sampleItems: [
+        {
+          name: "Dal Makhani & Shahi Paneer Royal",
+          description: "Slow-simmered black lentils cooked overnight with churned butter and cottage cheese in rich tomato-cashew gravy.",
+          tag: "Chef Special",
+          isCustomizable: true,
+        },
+        {
+          name: "Urban Signature Live Chaat Platter",
+          description: "Crispy spinach palak patta chaat, sweet tamarind drizzle, chilled spiced yogurt, and ruby pomegranate pearls.",
+          tag: "House Favorite",
+          isCustomizable: false,
+        },
+        {
+          name: "Stuffed Amritsari Kulcha & Chole",
+          description: "Tandoor-baked flaky leavened bread stuffed with spiced potatoes and herbs, served with authentic pindi chole.",
+          tag: "Tandoor Fresh",
+          isCustomizable: true,
+        },
+        {
+          name: "Sizzling Veg Kebab Assortment",
+          description: "Delicate melt-in-mouth dahi ke kebabs, hara bhara tikki, and char-grilled tandoori malai broccoli.",
+          tag: "Signature Starter",
+          isCustomizable: true,
+        },
+      ],
+    },
     {
       id: "mithai",
       title: "Artisanal Indian Mithai",
       subtitle: "Pure Desi Ghee & Dry Fruit Delicacies",
       description:
         "Handcrafted in small batches using traditional techniques. Verified recipes and seasonal varieties are tailored for weddings and festive moments.",
-      image: "/images/urban-sweets/mithai.jpg",
+      image: "/images/urban-sweets/sweet_shop_counter.png",
       isPlaceholderData: true,
       sampleItems: [
         {
@@ -137,7 +173,7 @@ export const urbanSweetsData = {
       subtitle: "European Techniques, Decadent Flavors",
       description:
         "Our baking studio crafts celebratory centerpieces, fresh viennoiserie, and savory tarts each morning using farm butter and natural ingredients.",
-      image: "/images/urban-sweets/bakery.jpg",
+      image: "/images/urban-sweets/terrace_dining_spread.png",
       isPlaceholderData: true,
       sampleItems: [
         {
@@ -172,7 +208,7 @@ export const urbanSweetsData = {
       subtitle: "For Diwali, Weddings & Corporate Milestones",
       description:
         "Present your greetings with unhurried distinction. Custom hamper boxes are available in royal maroon velvet, linen, and brushed gold metallic finishes.",
-      image: "/images/urban-sweets/gifting.jpg",
+      image: "/images/urban-sweets/luxury_gift_box_2.png",
       isPlaceholderData: true,
       sampleItems: [
         {
@@ -215,7 +251,16 @@ export const urbanSweetsData = {
       "Customizable dining menu (savory dishes, live chaat & sweets)",
       "Dedicated banquet host and service personnel",
     ],
-    heroImage: "/images/urban-sweets/banquet.jpg",
+    heroImage: "/images/urban-sweets/banquet_hall_2.jpg",
+    galleryImages: [
+      "/images/urban-sweets/banquet_hall_1.jpg",
+      "/images/urban-sweets/banquet_hall_2.jpg",
+      "/images/urban-sweets/banquet_hall_3.jpg",
+      "/images/urban-sweets/banquet_hall_4.jpg",
+      "/images/urban-sweets/banquet_setup_1.jpg",
+      "/images/urban-sweets/banquet_hall_5.jpg",
+      "/images/urban-sweets/banquet_hall_6.jpg",
+    ],
   },
   contact: {
     notice:

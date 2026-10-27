@@ -9,6 +9,8 @@ import {
   Gift,
   PartyPopper,
   Check,
+  Utensils,
+  Flame,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,9 +20,9 @@ import EnquiryForm from "@/components/EnquiryForm";
 import { urbanSweetsData } from "@/data/urbanSweetsData";
 
 export const metadata = {
-  title: "Urban Sweets & Bakers | Artisanal Sweets, Bakery & Banquet Lucknow",
+  title: "Urban Sweets & Bakers | Restaurant, Artisanal Sweets & Celebration Banquets Lucknow",
   description:
-    "Urban Sweets & Bakers by JB Group: Handcrafted Indian sweets, European-style patisserie, bespoke festive gifting, and an intimate celebration banquet in Lucknow.",
+    "Urban Sweets & Bakers by JB Group: A multi-cuisine family restaurant, pure handcrafted Indian sweets, French-inspired bakery, bespoke gifting, and an intimate celebration banquet in Lucknow.",
 };
 
 export default function UrbanSweetsHomePage() {
@@ -29,65 +31,72 @@ export default function UrbanSweetsHomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#3D0F18]">
+      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#2D0A11]">
+        {/* Full Visibility Hero Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/urban-sweets/mithai.jpg"
-            alt="Urban Sweets & Bakers Luxury Artisanal Mithai"
+            src="/images/urban-sweets/sweet_shop_counter.png"
+            alt="Urban Sweets & Bakers Counter & Artisanal Atelier"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center scale-105"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#3D0F18] via-[#3D0F18]/60 to-black/40" />
+          {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Radiant */}
+          <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-72 sm:h-88 bg-gradient-to-t from-[#2D0A11] via-[#2D0A11]/70 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#FAF6F0] pt-24 pb-16">
+        {/* Top: Clean Breadcrumb Bar */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[{ label: "Urban Sweets & Bakers" }]}
             theme="maroon"
           />
+        </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#DFCA9B]/40 text-xs tracking-[0.25em] uppercase text-[#DFCA9B] font-medium mt-6 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#DFCA9B]" />
-            <span>Artisanal Confectionery • Bakery • Banquet • Lucknow</span>
-          </div>
+        {/* Bottom: Minimal, High-Impact Visual Anchor */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#DFCA9B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
+                <Sparkles className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                <span>Restaurant • Artisanal Sweets • Bakery • Banquets</span>
+              </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#FAF6F0] leading-[1.1] mb-6">
-            Made for <br className="hidden sm:inline" />
-            <span className="italic font-normal font-serif text-[#DFCA9B]">
-              Sweet Moments.
-            </span>
-          </h1>
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-[1.15] drop-shadow-lg">
+                A Feast of Flavors &amp;{" "}
+                <span className="italic font-normal font-serif text-[#DFCA9B]">
+                  Sweet Moments.
+                </span>
+              </h1>
+            </div>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg font-light text-[#E7DFD1] leading-relaxed mb-10">
-            A celebration of handcrafted Indian mithai, European-inspired artisanal bakery loaves, delicate patisserie, bespoke festive hampers, and an intimate celebration banquet venue.
-          </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="#restaurant"
+                className="px-6 sm:px-7 py-3.5 bg-[#DFCA9B] hover:bg-[#ebd9b2] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+              >
+                <Utensils className="w-4 h-4 text-[#3D0F18]" />
+                <span>Restaurant</span>
+              </a>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/urban-sweets/sweets-and-bakery"
-              className="w-full sm:w-auto px-7 py-3.5 bg-[#581825] border border-[#DFCA9B] text-[#FAF6F0] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-xl flex items-center justify-center gap-2"
-            >
-              <Cake className="w-4 h-4 text-[#DFCA9B]" />
-              <span>Explore Sweets & Bakery</span>
-            </Link>
+              <Link
+                href="/urban-sweets/sweets-and-bakery"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+              >
+                <Cake className="w-4 h-4 text-[#DFCA9B]" />
+                <span>Sweets &amp; Bakery</span>
+              </Link>
 
-            <Link
-              href="/urban-sweets/sweets-and-bakery#gifting"
-              className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 text-[#FAF6F0] border border-[#DFCA9B]/40 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <Gift className="w-4 h-4 text-[#DFCA9B]" />
-              <span>Festive & Corporate Gifting</span>
-            </Link>
-
-            <Link
-              href="/urban-sweets/banquets"
-              className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 text-[#FAF6F0] border border-[#DFCA9B]/40 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <PartyPopper className="w-4 h-4 text-[#DFCA9B]" />
-              <span>Celebration Banquet</span>
-            </Link>
+              <Link
+                href="/urban-sweets/banquets"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+              >
+                <PartyPopper className="w-4 h-4 text-[#DFCA9B]" />
+                <span>Banquets</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -97,7 +106,7 @@ export default function UrbanSweetsHomePage() {
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-2">
           <ShieldAlert className="w-4 h-4 shrink-0" />
           <span>
-            <strong>Brand Note:</strong> Urban Sweets & Bakers brand structure is established below. Specific retail store addresses and phone numbers will be officially updated once finalized.
+            <strong>Brand Note:</strong> Urban Sweets &amp; Bakers brand structure is established below. Specific retail store addresses and phone numbers will be officially updated once finalized.
           </span>
         </div>
       </section>
@@ -107,10 +116,10 @@ export default function UrbanSweetsHomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#581825]">
-              Artisanal Philosophy
+              Culinary Philosophy
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-tight">
-              Honoring Heritage Recipes with Contemporary Patisserie Artistry
+              Honoring Authentic Flavors, Pure Mithai &amp; Memorable Dining
             </h2>
             <div className="h-0.5 w-16 bg-[#C4A46B]" />
 
@@ -121,12 +130,26 @@ export default function UrbanSweetsHomePage() {
               {urbanSweetsData.overview.paragraph2}
             </p>
 
-            <div className="pt-2">
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a
+                href="#restaurant"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
+              >
+                <span>Discover Restaurant</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
               <Link
                 href="/urban-sweets/sweets-and-bakery"
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
               >
-                <span>View Product Collections</span>
+                <span>Artisanal Sweets</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/urban-sweets/banquets"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
+              >
+                <span>Banquet Hall</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -135,44 +158,180 @@ export default function UrbanSweetsHomePage() {
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl">
               <Image
-                src="/images/urban-sweets/mithai.jpg"
-                alt="Artisan Sweets"
+                src="/images/urban-sweets/restaurant_dining_1.jpg"
+                alt="Urban Sweets Multi-Cuisine Family Restaurant"
                 fill
                 sizes="25vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4">
+                <span className="text-xs font-semibold text-white">Family Dining Room</span>
+              </div>
             </div>
             <div className="space-y-4 pt-8">
               <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
                 <Image
-                  src="/images/urban-sweets/bakery.jpg"
-                  alt="Gourmet Bakery Studio"
+                  src="/images/urban-sweets/sweet_shop_interior_display.png"
+                  alt="Artisanal Pure Desi Ghee Sweets Display"
                   fill
                   sizes="25vw"
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                  <span className="text-[11px] font-semibold text-white">Artisanal Sweets Atelier</span>
+                </div>
               </div>
               <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
                 <Image
-                  src="/images/urban-sweets/gifting.jpg"
-                  alt="Luxury Gift Hampers"
+                  src="/images/urban-sweets/banquet_hall_1.jpg"
+                  alt="Celebration Banquet Venue"
                   fill
                   sizes="25vw"
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                  <span className="text-[11px] font-semibold text-white">Celebration Banquet</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Four Distinct Offerings */}
+      {/* Featured Restaurant Spotlight */}
+      <section id="restaurant" className="py-20 bg-[#FAF6F0] border-y border-[#581825]/15 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
+            <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto min-h-[350px]">
+              <Image
+                src="/images/urban-sweets/restaurant_dining_2.jpg"
+                alt="Urban Sweets & Bakers Multi-Cuisine Family Restaurant"
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+              />
+              <div className="absolute top-4 left-4">
+                <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[#581825]/90 text-[#DFCA9B] rounded-sm border border-[#DFCA9B]/30">
+                  Dine-In • North Indian • Tandoor • Chaat
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#581825]/10 text-[#581825] rounded-full text-xs font-semibold uppercase tracking-wider">
+                  <Flame className="w-3.5 h-3.5 text-[#581825]" />
+                  <span>The Restaurant Experience</span>
+                </div>
+                <h3 className="font-serif text-3xl sm:text-4xl font-bold text-[#252522]">
+                  Multi-Cuisine Family Dining
+                </h3>
+                <p className="text-sm text-[#73765B] font-light leading-relaxed">
+                  Step into our welcoming dining room with plush velvet banquette seating and ambient chandeliers. We serve slow-simmered Dal Makhani, Paneer curries, clay-oven tandoor rotis, and mouthwatering street chaat prepared fresh with utmost hygiene and authentic spice blends.
+                </p>
+
+                <div className="space-y-2 pt-2 border-t border-black/5 text-xs text-[#252522]/80">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#581825]" />
+                    <span>Rich North Indian curries, paneer delicacies &amp; live gravies</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#581825]" />
+                    <span>Tandoori breads, stuffed kulchas &amp; sizzling kebabs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#581825]" />
+                    <span>Live Lucknowi chaat counter: Palak patta chaat &amp; dahi bhalla</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#581825]" />
+                    <span>Spacious family tables &amp; dedicated hospitality staff</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-wrap gap-4">
+                <Link
+                  href="/urban-sweets/sweets-and-bakery#restaurant-menu"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md"
+                >
+                  <span>View Dining Highlights</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                </Link>
+                <Link
+                  href="/urban-sweets/banquets"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#581825] border border-[#581825]/40 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#FAF6F0] transition-all"
+                >
+                  <span>Book Private Banquet</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Restaurant & Food Photography Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+              <Image
+                src="/images/urban-sweets/food_dish_1.jpg"
+                alt="Signature Gravies & Curries"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+                <span className="text-[11px] font-semibold text-white">Signature North Indian Gravies</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+              <Image
+                src="/images/urban-sweets/restaurant_dining_3.jpg"
+                alt="Warm Dining Room Seating"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+                <span className="text-[11px] font-semibold text-white">Comfortable Dining Room</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+              <Image
+                src="/images/urban-sweets/food_dish_2.jpg"
+                alt="Chef Specialty Delicacies"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+                <span className="text-[11px] font-semibold text-white">Authentic Handcrafted Flavors</span>
+              </div>
+            </div>
+
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+              <Image
+                src="/images/urban-sweets/terrace_dining_spread.png"
+                alt="Grand Terrace Feast Spread"
+                fill
+                sizes="(max-width: 768px) 50vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+                <span className="text-[11px] font-semibold text-white">Lavish Dining Spread</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Four Expressions of Craft */}
       <section className="py-24 bg-[#581825] text-[#FAF6F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Offerings"
+            eyebrow="Complete Hospitality"
             title="Four Expressions of Craft"
-            description="From daily morning baked viennoiserie to royal wedding hamper collections and intimate banquet dinners."
+            description="From multi-cuisine restaurant feasts and pure desi ghee sweets to celebration banquet events and bakery hampers."
             theme="maroon"
           />
 
@@ -180,7 +339,7 @@ export default function UrbanSweetsHomePage() {
             {urbanSweetsData.offerings.map((offering) => (
               <div
                 key={offering.id}
-                className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-lg flex flex-col justify-between group"
+                className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-lg flex flex-col justify-between group hover:border-[#DFCA9B]/70 transition-all duration-300"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
@@ -231,9 +390,9 @@ export default function UrbanSweetsHomePage() {
       {/* Banquet Spotlight */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
-          <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto">
+          <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto min-h-[360px]">
             <Image
-              src="/images/urban-sweets/banquet.jpg"
+              src="/images/urban-sweets/banquet_hall_2.jpg"
               alt="Urban Sweets Celebration Banquet"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -268,13 +427,151 @@ export default function UrbanSweetsHomePage() {
             </div>
           </div>
         </div>
+
+        {/* Banquet Venue Photo Strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_1.jpg"
+              alt="Banquet Grand View"
+              fill
+              sizes="(max-width: 768px) 50vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+              <span className="text-[11px] font-semibold text-white">Grand Celebration Hall</span>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_setup_1.jpg"
+              alt="Banquet Stage & Seating"
+              fill
+              sizes="(max-width: 768px) 50vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+              <span className="text-[11px] font-semibold text-white">Royal Seating Arrangements</span>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_3.jpg"
+              alt="Crystal Chandelier Ambience"
+              fill
+              sizes="(max-width: 768px) 50vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+              <span className="text-[11px] font-semibold text-white">Crystal Chandeliers</span>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <Image
+              src="/images/urban-sweets/banquet_hall_4.jpg"
+              alt="Intimate Dining Ambience"
+              fill
+              sizes="(max-width: 768px) 50vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
+              <span className="text-[11px] font-semibold text-white">Milestone Gatherings</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Luxury Gifting Section */}
+      <section className="py-20 bg-[#581825] text-[#FAF6F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Bespoke Confectionery"
+            title="Luxury Gifting Collections"
+            description="Royal velvet boxes, gold hot-stamped trunks, and personalized confections crafted for weddings and corporate milestones."
+            theme="maroon"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 transition-all">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/urban-sweets/luxury_gift_box_1.png"
+                  alt="Royal Heritage Velvet Gift Box"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[#581825]/90 border border-[#DFCA9B]/40 text-[#DFCA9B] rounded-sm">
+                    Wedding &amp; VIP
+                  </span>
+                </div>
+              </div>
+              <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-serif text-2xl font-bold text-[#FAF6F0]">
+                    The Royal Heritage Velvet Box
+                  </h3>
+                  <p className="text-sm text-[#E7DFD1]/80 mt-2 font-light leading-relaxed">
+                    Upholstered in rich royal velvet with gold embossing, designed to house signature pure desi ghee confections, dried saffron fruits, and customized monogram notes.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="/urban-sweets/sweets-and-bakery#hampers"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
+                  >
+                    <span>View Gifting Details</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 transition-all">
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/images/urban-sweets/luxury_gift_box_2.png"
+                  alt="Artisanal Sweets Presentation Hamper"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[#581825]/90 border border-[#DFCA9B]/40 text-[#DFCA9B] rounded-sm">
+                    Festive &amp; Corporate
+                  </span>
+                </div>
+              </div>
+              <div className="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-serif text-2xl font-bold text-[#FAF6F0]">
+                    Festive Jewel Hamper Collection
+                  </h3>
+                  <p className="text-sm text-[#E7DFD1]/80 mt-2 font-light leading-relaxed">
+                    Rigid drawer presentation featuring artisanal sweets assortments, gourmet bakery treats, and roasted nuts curated for festive greetings and corporate gifting.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <Link
+                    href="/urban-sweets/sweets-and-bakery#hampers"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
+                  >
+                    <span>Request Hamper Proposal</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Online Enquiry Form */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <EnquiryForm
           title="Urban Sweets & Bakers Enquiries"
-          subtitle="Place bulk gifting enquiries, custom celebration cake requests, or reserve our private banquet hall."
+          subtitle="Place bulk gifting enquiries, custom celebration cake requests, restaurant reservations, or reserve our private celebration banquet hall."
           defaultBusiness="urban-sweets"
         />
       </section>

@@ -36,7 +36,8 @@ export default function SkyhiltonHomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#241119]">
+      <section className="relative min-h-[85vh] sm:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#241119]">
+        {/* Full Visibility Hero Image */}
         <div className="absolute inset-0">
           <Image
             src="/images/skyhilton/rooftop_terrace.png"
@@ -44,57 +45,63 @@ export default function SkyhiltonHomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center scale-105"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#241119] via-[#241119]/55 to-black/45" />
+          {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Radiant */}
+          <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-0 h-72 sm:h-88 bg-gradient-to-t from-[#241119] via-[#241119]/70 to-transparent pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#FAF7F5] pt-24 pb-16">
+        {/* Top: Clean Breadcrumb Bar */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
           <Breadcrumbs
             items={[{ label: "JB Skyhilton" }]}
             theme="charcoal"
           />
+        </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#CCA08A]/40 text-xs tracking-[0.25em] uppercase text-[#E5BEA9] font-medium mt-6 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
-            <span>LDA Colony, Lucknow • Boutique Hotel & Culinary Haven</span>
-          </div>
+        {/* Bottom: Minimal, High-Impact Visual Anchor */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#CCA08A]/40 text-[11px] tracking-[0.25em] uppercase text-[#E5BEA9] font-medium">
+                <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
+                <span>LDA Colony, Lucknow • Boutique Hotel & Culinary Haven</span>
+              </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#FAF7F5] leading-[1.1] mb-6">
-            Your Stay. Your Celebration. <br className="hidden sm:inline" />
-            <span className="italic font-normal font-serif text-[#CCA08A]">
-              Your Skyhilton.
-            </span>
-          </h1>
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF7F5] leading-[1.15] drop-shadow-lg">
+                Your Stay. Your Celebration.{" "}
+                <span className="italic font-normal font-serif text-[#CCA08A]">
+                  Your Skyhilton.
+                </span>
+              </h1>
+            </div>
 
-          <p className="max-w-2xl mx-auto text-base sm:text-lg font-light text-[#EBDED8] leading-relaxed mb-10">
-            A privately owned boutique hotel offering 27 tastefully done up rooms, an upscale Bar, a 70-guest Fine Dine Restaurant, multiple banquet halls, and an intimate café.
-          </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href="/skyhilton/rooms"
+                className="px-6 sm:px-7 py-3.5 bg-[#CCA08A] hover:bg-[#DEB5A0] text-[#241119] rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+              >
+                <Bed className="w-4 h-4" />
+                <span>Book a Room</span>
+              </Link>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/skyhilton/rooms"
-              className="w-full sm:w-auto px-7 py-3.5 bg-[#CCA08A] text-[#241119] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DEB5A0] transition-all shadow-xl flex items-center justify-center gap-2"
-            >
-              <Bed className="w-4 h-4" />
-              <span>Book a Room</span>
-            </Link>
+              <Link
+                href="/skyhilton/dining"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+              >
+                <Utensils className="w-4 h-4 text-[#CCA08A]" />
+                <span>Dining & Bar</span>
+              </Link>
 
-            <Link
-              href="/skyhilton/dining"
-              className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 text-[#FAF7F5] border border-[#CCA08A]/40 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <Utensils className="w-4 h-4 text-[#CCA08A]" />
-              <span>Explore Dining & Bar</span>
-            </Link>
-
-            <Link
-              href="/skyhilton/banquets"
-              className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 text-[#FAF7F5] border border-[#CCA08A]/40 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center justify-center gap-2"
-            >
-              <PartyPopper className="w-4 h-4 text-[#CCA08A]" />
-              <span>Plan an Event</span>
-            </Link>
+              <Link
+                href="/skyhilton/banquets"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+              >
+                <PartyPopper className="w-4 h-4 text-[#CCA08A]" />
+                <span>Plan an Event</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
