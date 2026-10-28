@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Phone,
@@ -21,11 +22,25 @@ export default function Footer() {
         {/* Top Group Branding Banner */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pb-12 border-b border-white/10">
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="font-serif text-2xl font-bold tracking-widest text-[#F7F3EB]">
-                JB GROUP
-              </span>
-              <span className="w-2 h-2 rounded-full bg-[#C4A46B]" />
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logos/jb_group_logo.png"
+                alt="JB Group Logo"
+                width={48}
+                height={69}
+                className="h-12 w-auto object-contain shrink-0"
+              />
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-serif text-2xl font-bold tracking-widest text-[#F7F3EB]">
+                    JB GROUP
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-[#C4A46B]" />
+                </div>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-[#C4A46B] font-semibold block">
+                  Hospitality &amp; Celebrations
+                </span>
+              </div>
             </div>
             <p className="text-sm text-[#E7DFD1]/80 max-w-md font-light leading-relaxed">
               Hospitality, thoughtfully elevated. Connecting luxury boutique stays, authentic gastronomy, artisanal confectionery, and grand celebratory banquet spaces across Lucknow.
@@ -41,9 +56,18 @@ export default function Footer() {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {/* Quick Explore - Skyhilton */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-                JB Skyhilton
-              </h4>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/images/logos/jb_skyhilton_logo.png"
+                  alt="JB Skyhilton Logo"
+                  width={24}
+                  height={31}
+                  className="h-7 w-auto object-contain shrink-0"
+                />
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
+                  JB Skyhilton
+                </h4>
+              </div>
               <ul className="space-y-2 text-xs text-[#E7DFD1]/70">
                 <li>
                   <Link href="/skyhilton" className="hover:text-[#C4A46B] transition-colors">
@@ -75,9 +99,18 @@ export default function Footer() {
 
             {/* Quick Explore - Urban Sweets */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#DFCA9B]">
-                Urban Sweets & Bakers
-              </h4>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/images/logos/jb_urban_sweets_logo.png"
+                  alt="Urban Sweets Logo"
+                  width={34}
+                  height={22}
+                  className="h-5.5 w-auto object-contain shrink-0"
+                />
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#DFCA9B]">
+                  Urban Sweets
+                </h4>
+              </div>
               <ul className="space-y-2 text-xs text-[#E7DFD1]/70">
                 <li>
                   <Link href="/urban-sweets" className="hover:text-[#DFCA9B] transition-colors">
@@ -109,9 +142,18 @@ export default function Footer() {
 
             {/* Quick Explore - JB Innovation */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
-                JB Innovation
-              </h4>
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/images/logos/jb_innovations_logo.png"
+                  alt="JB Innovation Logo"
+                  width={24}
+                  height={30}
+                  className="h-7 w-auto object-contain shrink-0"
+                />
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#C4A46B]">
+                  JB Innovation
+                </h4>
+              </div>
               <ul className="space-y-2 text-xs text-[#E7DFD1]/70">
                 <li>
                   <Link href="/jb-innovation" className="hover:text-[#C4A46B] transition-colors">

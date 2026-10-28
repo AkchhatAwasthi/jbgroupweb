@@ -48,7 +48,7 @@ export default function InnovationHomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Brilliant */}
           <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -66,13 +66,23 @@ export default function InnovationHomePage() {
         {/* Bottom: Minimal, High-Impact Visual Anchor */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#C4A46B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
-                <Sparkles className="w-3 h-3 text-[#C4A46B]" />
-                <span>Grand Wedding & Celebration Destination • Lucknow</span>
+            <div className="space-y-4 max-w-2xl">
+              <div className="flex items-center gap-3 animate-fadeIn">
+                <Image
+                  src="/images/logos/jb_innovations_logo.png"
+                  alt="JB Innovation Logo"
+                  width={55}
+                  height={70}
+                  className="h-14 sm:h-16 w-auto object-contain drop-shadow-md"
+                  priority
+                />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#C4A46B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
+                  <Sparkles className="w-3 h-3 text-[#C4A46B]" />
+                  <span>Grand Wedding &amp; Celebration Destination • Lucknow</span>
+                </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-[1.15] drop-shadow-lg">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-[1.15] drop-shadow-lg animate-fadeInUp">
                 Where Every Celebration{" "}
                 <span className="italic font-normal font-serif text-[#DFCA9B]">
                   Finds Its Setting.
@@ -80,10 +90,10 @@ export default function InnovationHomePage() {
               </h1>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 animate-fadeInUp delay-100">
               <Link
                 href="/jb-innovation/venues"
-                className="px-6 sm:px-8 py-3.5 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+                className="btn-shine px-6 sm:px-8 py-3.5 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-xl hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
               >
                 <PartyPopper className="w-4 h-4" />
                 <span>Explore Venues</span>
@@ -91,7 +101,7 @@ export default function InnovationHomePage() {
 
               <a
                 href="#enquire"
-                className="px-6 sm:px-8 py-3.5 bg-black/50 hover:bg-black/70 text-[#F7F3EB] border border-[#C4A46B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+                className="px-6 sm:px-8 py-3.5 bg-black/50 hover:bg-black/70 text-[#F7F3EB] border border-[#C4A46B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2"
               >
                 <span>Enquire Now</span>
               </a>
@@ -104,12 +114,21 @@ export default function InnovationHomePage() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Refined Editorial & Minimal Highlights */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2">
-              <span className="w-6 h-[1.5px] bg-[#C4A46B]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
-                Destination Philosophy
-              </span>
+          <div className="lg:col-span-6 space-y-6 reveal-left">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logos/jb_innovations_logo.png"
+                alt="JB Innovation Emblem"
+                width={48}
+                height={61}
+                className="h-12 w-auto object-contain"
+              />
+              <div className="inline-flex items-center gap-2">
+                <span className="w-6 h-[1.5px] bg-[#C4A46B]" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
+                  Destination Philosophy
+                </span>
+              </div>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-[1.15]">
@@ -122,22 +141,22 @@ export default function InnovationHomePage() {
 
             {/* Clean Minimal Stat Strip (Zero Clunky Card Boxes) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#E7DFD1]">
-              <div>
+              <div className="hover-lift transition-all duration-300 p-2 rounded-sm">
                 <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">4</span>
                 <span className="text-xs font-semibold text-[#252522] block mt-0.5">Venues</span>
                 <span className="text-[10px] text-[#73765B]">Halls &amp; Lawns</span>
               </div>
-              <div>
+              <div className="hover-lift transition-all duration-300 p-2 rounded-sm">
                 <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">2</span>
                 <span className="text-xs font-semibold text-[#252522] block mt-0.5">Room Types</span>
                 <span className="text-[10px] text-[#73765B]">Deluxe &amp; Executive</span>
               </div>
-              <div>
+              <div className="hover-lift transition-all duration-300 p-2 rounded-sm">
                 <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">Dining</span>
                 <span className="text-xs font-semibold text-[#252522] block mt-0.5">Carnations</span>
                 <span className="text-[10px] text-[#73765B]">Refined Restaurant</span>
               </div>
-              <div>
+              <div className="hover-lift transition-all duration-300 p-2 rounded-sm">
                 <span className="font-serif text-2xl sm:text-3xl font-bold text-[#73765B] block">5.3 km</span>
                 <span className="text-xs font-semibold text-[#252522] block mt-0.5">Airport</span>
                 <span className="text-[10px] text-[#73765B]">CCS Airport Transit</span>
@@ -147,7 +166,7 @@ export default function InnovationHomePage() {
             <div className="pt-2">
               <Link
                 href="/jb-innovation/venues"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-md group"
+                className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] hover:bg-[#5C5F47] text-white rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-md group"
               >
                 <span>Discover All Halls &amp; Lawns</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -156,8 +175,8 @@ export default function InnovationHomePage() {
           </div>
 
           {/* Right Column: Balanced 2-Photo Luxury Duet (Equal Height, No Clutter) */}
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4 sm:gap-6 reveal-right">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group hover-lift">
               <Image
                 src="/images/innovation/DSC_2803.jpg"
                 alt="Crown Hall Grand Crystal Chandelier Banquet"
@@ -172,7 +191,7 @@ export default function InnovationHomePage() {
               </div>
             </div>
 
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group hover-lift delay-150">
               <Image
                 src="/images/innovation/DSC_1977.jpg"
                 alt="Triple Arch Royal Wedding Stage"
@@ -209,7 +228,7 @@ export default function InnovationHomePage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Accommodation Card */}
-          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group">
+          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group hover-lift reveal-left transition-all duration-300 hover:border-[#C4A46B]">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src="/images/innovation/DSC_0747.jpg"
@@ -235,17 +254,17 @@ export default function InnovationHomePage() {
               <div className="pt-2">
                 <Link
                   href="/jb-innovation/accommodation"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#73765B] hover:text-[#252522] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#73765B] hover:text-[#252522] transition-colors group/link"
                 >
                   <span>View Rooms & Amenities</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                 </Link>
               </div>
             </div>
           </div>
 
           {/* Dining Card */}
-          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group">
+          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group hover-lift reveal-right transition-all duration-300 hover:border-[#C4A46B]">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src="/images/innovation/carnations_restaurant.png"
@@ -271,10 +290,10 @@ export default function InnovationHomePage() {
               <div className="pt-2">
                 <Link
                   href="/jb-innovation/dining"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#73765B] hover:text-[#252522] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#73765B] hover:text-[#252522] transition-colors group/link"
                 >
                   <span>Explore Carnations Dining</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                 </Link>
               </div>
             </div>
@@ -285,7 +304,7 @@ export default function InnovationHomePage() {
       {/* Connectivity Banner */}
       <section className="py-16 bg-[#FAF7F2] border-y border-[#E7DFD1]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-10 reveal-up">
             <span className="text-[10px] font-bold uppercase tracking-widest text-[#73765B]">
               Location & Access
             </span>
@@ -296,7 +315,12 @@ export default function InnovationHomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {innovationData.connectivity.map((item, idx) => (
-              <div key={idx} className="bg-white border border-[#E7DFD1] p-5 rounded-sm shadow-sm space-y-1">
+              <div
+                key={idx}
+                className={`bg-white border border-[#E7DFD1] p-5 rounded-sm shadow-sm space-y-1 hover-lift transition-all duration-300 hover:border-[#C4A46B] reveal-up ${
+                  idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""
+                }`}
+              >
                 <span className="font-serif text-3xl font-bold text-[#73765B] block">
                   {item.distance}
                 </span>
@@ -313,7 +337,7 @@ export default function InnovationHomePage() {
       </section>
 
       {/* Event Enquiry Form */}
-      <section id="enquire" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="enquire" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           initialType="banquet"
           title="Plan Your Event at JB Innovation"

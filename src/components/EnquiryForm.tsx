@@ -583,14 +583,17 @@ export default function EnquiryForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full sm:w-auto px-8 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50"
+              className="btn-shine w-full sm:w-auto px-8 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-50 group"
             >
               {isSubmitting ? (
-                <span>Registering Enquiry...</span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full border-2 border-[#C4A46B] border-t-transparent animate-spin" />
+                  <span>Registering Enquiry...</span>
+                </span>
               ) : (
                 <>
                   <span>Submit Formal Enquiry</span>
-                  <Send className="w-3.5 h-3.5 text-[#C4A46B]" />
+                  <Send className="w-3.5 h-3.5 text-[#C4A46B] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </>
               )}
             </button>

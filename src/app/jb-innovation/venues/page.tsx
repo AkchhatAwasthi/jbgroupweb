@@ -31,7 +31,7 @@ export default function InnovationVenuesPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -53,25 +53,25 @@ export default function InnovationVenuesPage() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
             <div className="space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block animate-fadeIn">
                 Landmark Celebration Spaces
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md">
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md animate-fadeInUp">
                 Grand Halls, Verdant Lawns &amp; Open Skies
               </h1>
             </div>
 
-            <div className="flex flex-wrap gap-2 text-xs">
-              <a href="#crown-hall" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all">
+            <div className="flex flex-wrap gap-2 text-xs animate-fadeInUp delay-100">
+              <a href="#crown-hall" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 Crown Hall
               </a>
-              <a href="#kanishk-hall" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all">
+              <a href="#kanishk-hall" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 Kanishk Hall
               </a>
-              <a href="#lawns" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all">
+              <a href="#lawns" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 Lawns &amp; Banquets
               </a>
-              <a href="#terrace" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all">
+              <a href="#terrace" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#C4A46B]/40 rounded-sm text-[#DFCA9B] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 Open Terrace
               </a>
             </div>
@@ -84,14 +84,14 @@ export default function InnovationVenuesPage() {
         {/* Venue 1: Crown Hall */}
         <div id="crown-hall" className="scroll-mt-28 space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-4">
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+            <div className="lg:col-span-7 space-y-4 reveal-left">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl hover-lift">
                 <Image
                   src="/images/innovation/DSC_2803.jpg"
                   alt="JB Innovation Crown Hall Grand Crystal Ballroom"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-semibold px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-[#DFCA9B] rounded-sm">
@@ -102,13 +102,13 @@ export default function InnovationVenuesPage() {
 
               {/* Sub-gallery photo strip */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300">
                   <Image
                     src="/images/innovation/DSC_1975.jpg"
                     alt="Floral Entrance Arch"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -117,13 +117,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-100">
                   <Image
                     src="/images/innovation/DSC_1847.jpg"
                     alt="Rose Wall Bridal Stage"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -132,13 +132,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-200">
                   <Image
                     src="/images/innovation/4th.jpg"
                     alt="Gourmet Buffet Display"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -149,7 +149,7 @@ export default function InnovationVenuesPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 space-y-5">
+            <div className="lg:col-span-5 space-y-5 reveal-right">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
                 Ballroom 01
               </span>
@@ -185,10 +185,10 @@ export default function InnovationVenuesPage() {
               <div className="pt-2">
                 <a
                   href="#enquire"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all group"
                 >
                   <span>Enquire Crown Hall</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function InnovationVenuesPage() {
         {/* Venue 2: Kanishk Hall */}
         <div id="kanishk-hall" className="scroll-mt-28 space-y-8 border-t border-black/10 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-5 order-2 lg:order-1">
+            <div className="lg:col-span-5 space-y-5 order-2 lg:order-1 reveal-left">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
                 Ballroom 02
               </span>
@@ -234,22 +234,22 @@ export default function InnovationVenuesPage() {
               <div className="pt-2">
                 <a
                   href="#enquire"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all group"
                 >
                   <span>Enquire Kanishk Hall</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+            <div className="lg:col-span-7 space-y-4 order-1 lg:order-2 reveal-right">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl hover-lift">
                 <Image
                   src="/images/innovation/DSC_1977.jpg"
                   alt="JB Innovation Kanishk Hall Triple Arch Royal Stage"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-semibold px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-[#DFCA9B] rounded-sm">
@@ -297,14 +297,14 @@ export default function InnovationVenuesPage() {
         {/* Venue 3: Lawns & Banquets */}
         <div id="lawns" className="scroll-mt-28 space-y-8 border-t border-black/10 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-4">
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+            <div className="lg:col-span-7 space-y-4 reveal-left">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl hover-lift">
                 <Image
                   src="/images/innovation/DSC_1959.jpg"
                   alt="JB Innovation Lawns and Banquets VIP Canopy Lounge"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-semibold px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-[#DFCA9B] rounded-sm">
@@ -315,13 +315,13 @@ export default function InnovationVenuesPage() {
 
               {/* Sub-gallery photo strip */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300">
                   <Image
                     src="/images/innovation/DSC_1980.jpg"
                     alt="Varmala Mandap Canopy"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -330,13 +330,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-100">
                   <Image
                     src="/images/innovation/DSC_2102.jpg"
                     alt="Night Lawn Gala"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -345,13 +345,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-200">
                   <Image
                     src="/images/innovation/DSC_1963.jpg"
                     alt="Illuminated Garden Pathway"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -362,7 +362,7 @@ export default function InnovationVenuesPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 space-y-5">
+            <div className="lg:col-span-5 space-y-5 reveal-right">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
                 Outdoor & Indoor Synergy
               </span>
@@ -398,10 +398,10 @@ export default function InnovationVenuesPage() {
               <div className="pt-2">
                 <a
                   href="#enquire"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all group"
                 >
                   <span>Enquire Lawns & Banquets</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
@@ -411,7 +411,7 @@ export default function InnovationVenuesPage() {
         {/* Venue 4: Open Terrace */}
         <div id="terrace" className="scroll-mt-28 space-y-8 border-t border-black/10 pt-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-5 order-2 lg:order-1">
+            <div className="lg:col-span-5 space-y-5 order-2 lg:order-1 reveal-left">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
                 Rooftop Venue
               </span>
@@ -447,22 +447,22 @@ export default function InnovationVenuesPage() {
               <div className="pt-2">
                 <a
                   href="#enquire"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all group"
                 >
                   <span>Enquire Open Terrace</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-4 order-1 lg:order-2">
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+            <div className="lg:col-span-7 space-y-4 order-1 lg:order-2 reveal-right">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl hover-lift">
                 <Image
                   src="/images/innovation/modern_rooftop_terrace.png"
                   alt="JB Innovation Open Terrace Rooftop Celebration Deck"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-semibold px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-[#DFCA9B] rounded-sm">
@@ -473,13 +473,13 @@ export default function InnovationVenuesPage() {
 
               {/* Sub-gallery photo strip */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300">
                   <Image
                     src="/images/innovation/DSC_1955.jpg"
                     alt="Evening Terrace Ambiance"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -488,13 +488,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-100">
                   <Image
                     src="/images/innovation/DSC_1954.jpg"
                     alt="Terrace Lounge Detail"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -503,13 +503,13 @@ export default function InnovationVenuesPage() {
                   </div>
                 </div>
 
-                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group">
+                <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-[#E7DFD1] shadow-sm group hover-lift transition-all duration-300 delay-200">
                   <Image
                     src="/images/innovation/DSC_1953.jpg"
                     alt="Celebration Setup Detail"
                     fill
                     sizes="20vw"
-                    className="object-cover group-hover:scale-105 transition-transform"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-2 opacity-90">
                     <span className="text-[10px] font-semibold text-white tracking-wider uppercase">
@@ -526,7 +526,7 @@ export default function InnovationVenuesPage() {
       {/* Grand Mandap & Real Decor Showcase Section */}
       <section className="py-24 bg-[#252522] text-[#F7F3EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal-up">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
               Ceremonial Setups & Decor Mastery
             </span>
@@ -540,7 +540,7 @@ export default function InnovationVenuesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group hover-lift reveal-up">
               <Image
                 src="/images/innovation/DSC_1980.jpg"
                 alt="Varmala & Pheras Mandap Setup"
@@ -562,7 +562,7 @@ export default function InnovationVenuesPage() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group hover-lift reveal-up delay-150">
               <Image
                 src="/images/innovation/DSC_1847.jpg"
                 alt="Bridal Rose Wall & Velvet Chaise"
@@ -584,7 +584,7 @@ export default function InnovationVenuesPage() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-white/10 group hover-lift reveal-up delay-300">
               <Image
                 src="/images/innovation/DSC_1975.jpg"
                 alt="Grand Floral Welcoming Archway"
@@ -610,7 +610,7 @@ export default function InnovationVenuesPage() {
       </section>
 
       {/* Enquiry Form */}
-      <section id="enquire" className="py-24 bg-[#FAF7F2] border-t border-[#E7DFD1] px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="enquire" className="py-24 bg-[#FAF7F2] border-t border-[#E7DFD1] px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           initialType="banquet"
           title="Reserve a Venue at JB Innovation"

@@ -27,7 +27,7 @@ export default function RoomCard({
   enquireHref,
 }: RoomCardProps) {
   return (
-    <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+    <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md hover:shadow-2xl hover-lift reveal-up transition-all duration-500 flex flex-col group hover:border-[#C4A46B]/40">
       {/* Visual Image */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#252522]">
         <Image
@@ -95,10 +95,10 @@ export default function RoomCard({
         <div className="pt-4 border-t border-black/5 flex items-center justify-between">
           <Link
             href={enquireHref}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-[#252522] text-[#F7F3EB] px-4 py-2.5 rounded-sm hover:bg-[#3D3D39] transition-colors"
+            className="btn-shine inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-[#252522] text-[#F7F3EB] px-4 py-2.5 rounded-sm hover:bg-[#3D3D39] transition-all duration-300 shadow-sm group/btn"
           >
             <span>Book / Enquire Tariff</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B]" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] group-hover/btn:translate-x-1 transition-transform duration-300" />
           </Link>
           <span className="text-[11px] text-[#73765B]">Best Rate Direct</span>
         </div>

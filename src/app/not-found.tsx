@@ -10,42 +10,42 @@ export default function NotFound() {
       <Navbar />
 
       <main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-24 text-center">
-        <div className="max-w-xl mx-auto space-y-6">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
+        <div className="max-w-xl mx-auto space-y-6 reveal-up">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C4A46B] block animate-fadeIn">
             404 • Destination Not Found
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#252522]">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#252522] animate-fadeInUp">
             A Moment to Reorient
           </h1>
-          <p className="text-sm sm:text-base text-[#73765B] font-light leading-relaxed">
+          <p className="text-sm sm:text-base text-[#73765B] font-light leading-relaxed animate-fadeInUp delay-100">
             The page you are looking for has moved or does not exist. Allow our hospitality navigation to guide you back to our premier destinations.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 text-xs font-semibold">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 text-xs font-semibold animate-fadeInUp delay-200">
             <Link
               href="/"
-              className="p-3 bg-white border border-[#E7DFD1] rounded hover:border-[#C4A46B] transition-colors"
+              className="p-3 bg-white border border-[#E7DFD1] hover:border-[#C4A46B] hover-lift rounded transition-all duration-300"
             >
               JB Group Home
             </Link>
             <Link
               href="/skyhilton"
-              className="p-3 bg-white border border-[#E7DFD1] rounded hover:border-[#C4A46B] transition-colors"
+              className="p-3 bg-white border border-[#E7DFD1] hover:border-[#C4A46B] hover-lift rounded transition-all duration-300"
             >
               JB Skyhilton
             </Link>
             <Link
               href="/jb-innovation"
-              className="p-3 bg-white border border-[#E7DFD1] rounded hover:border-[#C4A46B] transition-colors"
+              className="p-3 bg-white border border-[#E7DFD1] hover:border-[#C4A46B] hover-lift rounded transition-all duration-300"
             >
               JB Innovation
             </Link>
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 animate-fadeInUp delay-300">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all"
+              className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98]"
             >
               <Home className="w-3.5 h-3.5 text-[#C4A46B]" />
               <span>Return to Homepage</span>

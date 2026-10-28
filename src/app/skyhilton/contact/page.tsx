@@ -34,13 +34,13 @@ export default function SkyhiltonContactPage() {
           />
 
           <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B] block animate-fadeIn">
               JB Skyhilton Reservations
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F7F3EB] leading-tight animate-fadeInUp">
               Get in Touch with Our Team
             </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
+            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed animate-fadeInUp delay-100">
               We look forward to welcoming you to Sector B, Bargawan, LDA Colony, Lucknow. Call directly for immediate room availability or party arrangements.
             </p>
           </div>
@@ -51,8 +51,8 @@ export default function SkyhiltonContactPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Contact Details Card */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md space-y-6">
+          <div className="lg:col-span-5 space-y-8 reveal-left">
+            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md hover-lift transition-all duration-300 space-y-6">
               <h3 className="font-serif text-2xl font-bold text-[#252522] border-b border-black/10 pb-4">
                 Verified Contact Information
               </h3>
@@ -178,7 +178,7 @@ export default function SkyhiltonContactPage() {
           </div>
 
           {/* Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 reveal-right">
             <EnquiryForm
               title="Skyhilton Enquiry & Reservations"
               subtitle="Submit your requirements below. Our team handles requests for room stays, dining tables, party hall bookings, or corporate event quotes."

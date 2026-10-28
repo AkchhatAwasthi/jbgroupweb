@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -33,6 +34,9 @@ export default function Navbar() {
   let brandName = "JB GROUP";
   let brandSub = "HOSPITALITY & CELEBRATIONS";
   let brandLogoLink = "/";
+  let brandLogoSrc = "/images/logos/jb_group_logo.png";
+  let brandLogoAlt = "JB Group Official Emblem";
+  let brandLogoClass = "h-8 sm:h-9 w-auto";
   let navLinks: { label: string; href: string }[] = [];
   let directCallNumber = "";
   let buttonClass = "bg-[#C4A46B] text-[#252522] hover:bg-[#B3935A]";
@@ -41,6 +45,9 @@ export default function Navbar() {
     brandName = "JB SKYHILTON";
     brandSub = "HOTEL • DINING • BANQUETS";
     brandLogoLink = "/skyhilton";
+    brandLogoSrc = "/images/logos/jb_skyhilton_logo.png";
+    brandLogoAlt = "JB Skyhilton Official Logo";
+    brandLogoClass = "h-8 sm:h-9 w-auto";
     buttonClass = "bg-[#C4A46B] text-[#252522] hover:bg-[#B3935A]";
     directCallNumber = "7080888807";
     // Streamlined, concise links without redundant Overview
@@ -54,6 +61,9 @@ export default function Navbar() {
     brandName = "URBAN SWEETS & BAKERS";
     brandSub = "RESTAURANT • ARTISANAL SWEETS • BANQUET";
     brandLogoLink = "/urban-sweets";
+    brandLogoSrc = "/images/logos/jb_urban_sweets_logo.png";
+    brandLogoAlt = "Urban Sweets & Bakers Official Logo";
+    brandLogoClass = "h-7 sm:h-8 w-auto";
     buttonClass = "bg-[#581825] text-[#FAF6F0] border border-[#C4A46B] hover:bg-[#43121C]";
     directCallNumber = "";
     navLinks = [
@@ -65,6 +75,9 @@ export default function Navbar() {
     brandName = "JB INNOVATION";
     brandSub = "WEDDINGS • BANQUETS • LAWNS";
     brandLogoLink = "/jb-innovation";
+    brandLogoSrc = "/images/logos/jb_innovations_logo.png";
+    brandLogoAlt = "JB Innovation Official Logo";
+    brandLogoClass = "h-8 sm:h-9 w-auto";
     buttonClass = "bg-[#73765B] text-white hover:bg-[#5C5F47]";
     directCallNumber = "7080888803";
     // Streamlined, concise links without redundant Overview
@@ -86,7 +99,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="relative w-full z-40 bg-[#1D1D1B] border-b border-[#C4A46B]/25 py-2.5 shadow-sm font-navbar"
+      className="sticky top-0 w-full z-50 bg-[#1D1D1B]/95 backdrop-blur-md border-b border-[#C4A46B]/25 py-2 sm:py-2.5 shadow-md font-navbar transition-all duration-300"
       style={{
         fontFamily:
           '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -97,18 +110,30 @@ export default function Navbar() {
           {/* Brand Logo & Tagline */}
           <Link
             href={brandLogoLink}
-            className="group flex flex-col tracking-wider focus:outline-none shrink-0"
+            className="group flex items-center gap-2.5 sm:gap-3 focus:outline-none shrink-0 transition-transform duration-300 hover:scale-[1.01]"
             aria-label={`${brandName} Home`}
           >
-            <div className="flex items-center gap-1.5 whitespace-nowrap">
-              <span className="text-[15px] sm:text-[17px] font-bold tracking-[0.14em] text-[#F7F3EB] group-hover:text-[#C4A46B] transition-colors uppercase">
-                {brandName}
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C4A46B]" />
+            <div className="relative flex items-center justify-center shrink-0">
+              <Image
+                src={brandLogoSrc}
+                alt={brandLogoAlt}
+                width={80}
+                height={80}
+                className={`${brandLogoClass} object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm`}
+                priority
+              />
             </div>
-            <span className="text-[8px] sm:text-[8.5px] tracking-[0.22em] text-[#C4A46B] uppercase font-semibold whitespace-nowrap">
-              {brandSub}
-            </span>
+            <div className="flex flex-col tracking-wider">
+              <div className="flex items-center gap-1.5 whitespace-nowrap">
+                <span className="text-[14px] sm:text-[16px] font-bold tracking-[0.14em] text-[#F7F3EB] group-hover:text-[#C4A46B] transition-colors uppercase">
+                  {brandName}
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C4A46B] group-hover:scale-125 transition-transform hidden sm:inline-block" />
+              </div>
+              <span className="text-[7.5px] sm:text-[8.5px] tracking-[0.22em] text-[#C4A46B] uppercase font-semibold whitespace-nowrap">
+                {brandSub}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -120,10 +145,16 @@ export default function Navbar() {
             {(isSkyhilton || isUrbanSweets || isInnovation) && (
               <Link
                 href="/"
-                className="flex items-center gap-1.5 text-xs text-[#E7DFD1]/70 hover:text-[#C4A46B] transition-colors border-r border-white/15 pr-5 whitespace-nowrap"
+                className="flex items-center gap-1.5 text-xs text-[#E7DFD1]/70 hover:text-[#C4A46B] transition-colors border-r border-white/15 pr-5 whitespace-nowrap group"
                 title="Return to JB Group Parent"
               >
-                <Building2 className="w-3.5 h-3.5 text-[#C4A46B]" />
+                <Image
+                  src="/images/logos/jb_group_logo.png"
+                  alt="JB Group Parent"
+                  width={20}
+                  height={28}
+                  className="h-4 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                />
                 <span>JB Group</span>
               </Link>
             )}
@@ -142,57 +173,90 @@ export default function Navbar() {
                 >
                   <span>Our Businesses</span>
                   <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    className={`w-3.5 h-3.5 transition-transform duration-300 ${
                       businessesDropdownOpen ? "rotate-180 text-[#C4A46B]" : ""
                     }`}
                   />
                 </button>
 
                 {businessesDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-1.5 w-80 bg-[#1D1D1B] border border-[#C4A46B]/30 shadow-2xl rounded-sm p-3 space-y-1 animate-fadeIn z-50">
+                  <div className="absolute top-full left-0 mt-1.5 w-84 bg-[#1D1D1B]/98 backdrop-blur-lg border border-[#C4A46B]/30 shadow-2xl rounded-sm p-3 space-y-1.5 animate-fadeInDown z-50">
                     <Link
                       href="/skyhilton"
-                      className="block p-2.5 rounded hover:bg-white/5 transition-colors group"
+                      className="flex items-start gap-3 p-2.5 rounded hover:bg-white/5 transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#C4A46B]">
-                          JB Skyhilton
-                        </span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="w-8 h-8 rounded bg-black/40 border border-[#C4A46B]/20 flex items-center justify-center shrink-0 mt-0.5 p-1">
+                        <Image
+                          src="/images/logos/jb_skyhilton_logo.png"
+                          alt="JB Skyhilton Logo"
+                          width={32}
+                          height={42}
+                          className="h-full w-auto object-contain"
+                        />
                       </div>
-                      <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
-                        Hotel Stays, Fine Dine, Panoramic Bar, Café & Banquets
-                      </p>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#C4A46B] transition-colors">
+                            JB Skyhilton
+                          </span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </div>
+                        <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
+                          Hotel Stays, Fine Dine, Panoramic Bar, Café & Banquets
+                        </p>
+                      </div>
                     </Link>
 
                     <Link
                       href="/urban-sweets"
-                      className="block p-2.5 rounded hover:bg-white/5 transition-colors group"
+                      className="flex items-start gap-3 p-2.5 rounded hover:bg-white/5 transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#DFCA9B]">
-                          Urban Sweets & Bakers
-                        </span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="w-8 h-8 rounded bg-black/40 border border-[#DFCA9B]/20 flex items-center justify-center shrink-0 mt-0.5 p-1">
+                        <Image
+                          src="/images/logos/jb_urban_sweets_logo.png"
+                          alt="Urban Sweets Logo"
+                          width={36}
+                          height={24}
+                          className="w-full h-auto object-contain"
+                        />
                       </div>
-                      <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
-                        Restaurant, Artisanal Sweets, Bakery &amp; Celebration Banquet
-                      </p>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#DFCA9B] transition-colors">
+                            Urban Sweets &amp; Bakers
+                          </span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </div>
+                        <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
+                          Restaurant, Artisanal Sweets, Bakery &amp; Celebration Banquet
+                        </p>
+                      </div>
                     </Link>
 
                     <Link
                       href="/jb-innovation"
-                      className="block p-2.5 rounded hover:bg-white/5 transition-colors group"
+                      className="flex items-start gap-3 p-2.5 rounded hover:bg-white/5 transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#C4A46B]">
-                          JB Innovation
-                        </span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="w-8 h-8 rounded bg-black/40 border border-[#C4A46B]/20 flex items-center justify-center shrink-0 mt-0.5 p-1">
+                        <Image
+                          src="/images/logos/jb_innovations_logo.png"
+                          alt="JB Innovation Logo"
+                          width={32}
+                          height={42}
+                          className="h-full w-auto object-contain"
+                        />
                       </div>
-                      <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
-                        Weddings, Grand Banquet Halls, Landscaped Lawns & Rooms
-                      </p>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#F7F3EB] group-hover:text-[#C4A46B] transition-colors">
+                            JB Innovation
+                          </span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </div>
+                        <p className="text-[11px] text-[#E7DFD1]/70 mt-0.5 leading-snug">
+                          Weddings, Grand Banquet Halls, Landscaped Lawns & Rooms
+                        </p>
+                      </div>
                     </Link>
                   </div>
                 )}
@@ -226,9 +290,9 @@ export default function Navbar() {
             {directCallNumber ? (
               <a
                 href={`tel:${directCallNumber}`}
-                className="flex items-center gap-1.5 text-xs font-semibold text-[#F7F3EB] hover:text-[#C4A46B] transition-colors py-1.5 px-3 border border-white/20 hover:border-[#C4A46B]/40 rounded-sm whitespace-nowrap"
+                className="flex items-center gap-1.5 text-xs font-semibold text-[#F7F3EB] hover:text-[#C4A46B] transition-all duration-300 py-1.5 px-3 border border-white/20 hover:border-[#C4A46B]/60 hover:shadow-[0_0_15px_rgba(196,164,107,0.15)] rounded-sm whitespace-nowrap group"
               >
-                <Phone className="w-3.5 h-3.5 text-[#C4A46B]" />
+                <Phone className="w-3.5 h-3.5 text-[#C4A46B] group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
                 <span>Call {directCallNumber}</span>
               </a>
             ) : null}
@@ -243,7 +307,7 @@ export default function Navbar() {
                   ? "/jb-innovation/contact"
                   : "/contact"
               }
-              className={`px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] rounded-sm transition-all shadow-sm whitespace-nowrap ${buttonClass}`}
+              className={`btn-shine px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] rounded-sm transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap ${buttonClass}`}
             >
               Enquire Now
             </Link>
@@ -287,43 +351,71 @@ export default function Navbar() {
             <div className="grid grid-cols-2 gap-2 text-xs">
               <Link
                 href="/"
-                className={`p-2 rounded border text-center ${
+                className={`p-2 rounded border flex items-center justify-center gap-2 ${
                   !isSkyhilton && !isUrbanSweets && !isInnovation
                     ? "bg-[#C4A46B] text-[#252522] font-bold border-[#C4A46B]"
                     : "text-[#F7F3EB] border-white/10 hover:border-[#C4A46B]"
                 }`}
               >
-                JB Group Main
+                <Image
+                  src="/images/logos/jb_group_logo.png"
+                  alt="JB Group"
+                  width={16}
+                  height={22}
+                  className="h-4 w-auto object-contain"
+                />
+                <span>JB Group</span>
               </Link>
               <Link
                 href="/skyhilton"
-                className={`p-2 rounded border text-center ${
+                className={`p-2 rounded border flex items-center justify-center gap-2 ${
                   isSkyhilton
                     ? "bg-[#C4A46B] text-[#252522] font-bold border-[#C4A46B]"
                     : "text-[#F7F3EB] border-white/10 hover:border-[#C4A46B]"
                 }`}
               >
-                JB Skyhilton
+                <Image
+                  src="/images/logos/jb_skyhilton_logo.png"
+                  alt="Skyhilton"
+                  width={16}
+                  height={21}
+                  className="h-4 w-auto object-contain"
+                />
+                <span>Skyhilton</span>
               </Link>
               <Link
                 href="/urban-sweets"
-                className={`p-2 rounded border text-center ${
+                className={`p-2 rounded border flex items-center justify-center gap-2 ${
                   isUrbanSweets
                     ? "bg-[#581825] text-[#FAF6F0] font-bold border-[#C4A46B]"
                     : "text-[#F7F3EB] border-white/10 hover:border-[#C4A46B]"
                 }`}
               >
-                Urban Sweets
+                <Image
+                  src="/images/logos/jb_urban_sweets_logo.png"
+                  alt="Urban Sweets"
+                  width={22}
+                  height={14}
+                  className="h-3.5 w-auto object-contain"
+                />
+                <span>Urban Sweets</span>
               </Link>
               <Link
                 href="/jb-innovation"
-                className={`p-2 rounded border text-center ${
+                className={`p-2 rounded border flex items-center justify-center gap-2 ${
                   isInnovation
                     ? "bg-[#73765B] text-white font-bold border-[#C4A46B]"
                     : "text-[#F7F3EB] border-white/10 hover:border-[#C4A46B]"
                 }`}
               >
-                JB Innovation
+                <Image
+                  src="/images/logos/jb_innovations_logo.png"
+                  alt="JB Innovation"
+                  width={16}
+                  height={20}
+                  className="h-4 w-auto object-contain"
+                />
+                <span>Innovation</span>
               </Link>
             </div>
           </div>

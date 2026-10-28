@@ -77,7 +77,7 @@ function VideoCard({
 
   return (
     <div
-      className={`rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-300 group shadow-md hover:shadow-2xl ${
+      className={`rounded-sm overflow-hidden flex flex-col justify-between transition-all duration-500 group shadow-md hover:shadow-2xl hover-lift reveal-up ${
         theme === "dark"
           ? "bg-[#1E2018] border border-white/10 hover:border-[#C4A46B]/60"
           : "bg-white border border-[#E7DFD1] hover:border-[#C4A46B]/60"
@@ -219,14 +219,14 @@ export default function VideoShowcase({
             <div className="shrink-0">
               <a
                 href="/jb-innovation/venues"
-                className={`inline-flex items-center gap-2 px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-md ${
+                className={`btn-shine inline-flex items-center gap-2 px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-md group hover:scale-[1.02] active:scale-[0.98] ${
                   theme === "dark"
                     ? "bg-[#C4A46B] text-[#252522] hover:bg-[#DFCA9B]"
                     : "bg-[#73765B] text-white hover:bg-[#5C5F47]"
                 }`}
               >
                 <span>Explore Venues &amp; Halls</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           )}

@@ -40,7 +40,7 @@ export default function UrbanSweetsHomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Radiant */}
           <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -58,13 +58,23 @@ export default function UrbanSweetsHomePage() {
         {/* Bottom: Minimal, High-Impact Visual Anchor */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#DFCA9B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
-                <Sparkles className="w-3.5 h-3.5 text-[#DFCA9B]" />
-                <span>Restaurant • Artisanal Sweets • Bakery • Banquets</span>
+            <div className="space-y-4 max-w-2xl">
+              <div className="flex items-center gap-3 animate-fadeIn">
+                <Image
+                  src="/images/logos/jb_urban_sweets_logo.png"
+                  alt="Urban Sweets & Bakers Logo"
+                  width={75}
+                  height={48}
+                  className="h-12 sm:h-14 w-auto object-contain drop-shadow-md"
+                  priority
+                />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#DFCA9B]/40 text-[11px] tracking-[0.25em] uppercase text-[#DFCA9B] font-medium">
+                  <Sparkles className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                  <span>Restaurant • Artisanal Sweets • Bakery • Banquets</span>
+                </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-[1.15] drop-shadow-lg">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-[1.15] drop-shadow-lg animate-fadeInUp">
                 A Feast of Flavors &amp;{" "}
                 <span className="italic font-normal font-serif text-[#DFCA9B]">
                   Sweet Moments.
@@ -72,10 +82,10 @@ export default function UrbanSweetsHomePage() {
               </h1>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 animate-fadeInUp delay-100">
               <a
                 href="#restaurant"
-                className="px-6 sm:px-7 py-3.5 bg-[#DFCA9B] hover:bg-[#ebd9b2] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+                className="btn-shine px-6 sm:px-7 py-3.5 bg-[#DFCA9B] hover:bg-[#ebd9b2] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-xl hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
               >
                 <Utensils className="w-4 h-4 text-[#3D0F18]" />
                 <span>Restaurant</span>
@@ -83,7 +93,7 @@ export default function UrbanSweetsHomePage() {
 
               <Link
                 href="/urban-sweets/sweets-and-bakery"
-                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2"
               >
                 <Cake className="w-4 h-4 text-[#DFCA9B]" />
                 <span>Sweets &amp; Bakery</span>
@@ -91,7 +101,7 @@ export default function UrbanSweetsHomePage() {
 
               <Link
                 href="/urban-sweets/banquets"
-                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF6F0] border border-[#DFCA9B]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2"
               >
                 <PartyPopper className="w-4 h-4 text-[#DFCA9B]" />
                 <span>Banquets</span>
@@ -114,10 +124,19 @@ export default function UrbanSweetsHomePage() {
       {/* Brand Story */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#581825]">
-              Culinary Philosophy
-            </span>
+          <div className="lg:col-span-6 space-y-6 reveal-left">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logos/jb_urban_sweets_logo.png"
+                alt="Urban Sweets &amp; Bakers Emblem"
+                width={65}
+                height={42}
+                className="h-11 w-auto object-contain"
+              />
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#581825]">
+                Culinary Philosophy
+              </span>
+            </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-tight">
               Honoring Authentic Flavors, Pure Mithai &amp; Memorable Dining
             </h2>
@@ -133,61 +152,61 @@ export default function UrbanSweetsHomePage() {
             <div className="flex flex-wrap gap-4 pt-2">
               <a
                 href="#restaurant"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
+                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
               >
                 <span>Discover Restaurant</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <Link
                 href="/urban-sweets/sweets-and-bakery"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
+                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
               >
                 <span>Artisanal Sweets</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/urban-sweets/banquets"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
+                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#581825] hover:text-[#3D0F18] transition-colors border-b border-[#581825] pb-1"
               >
                 <span>Banquet Hall</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4 reveal-right">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl hover-lift">
               <Image
                 src="/images/urban-sweets/restaurant_dining_1.jpg"
                 alt="Urban Sweets Multi-Cuisine Family Restaurant"
                 fill
                 sizes="25vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-4">
                 <span className="text-xs font-semibold text-white">Family Dining Room</span>
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
+              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl hover-lift delay-150">
                 <Image
                   src="/images/urban-sweets/sweet_shop_interior_display.png"
                   alt="Artisanal Pure Desi Ghee Sweets Display"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
                   <span className="text-[11px] font-semibold text-white">Artisanal Sweets Atelier</span>
                 </div>
               </div>
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
+              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl hover-lift delay-300">
                 <Image
                   src="/images/urban-sweets/banquet_hall_1.jpg"
                   alt="Celebration Banquet Venue"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
                   <span className="text-[11px] font-semibold text-white">Celebration Banquet</span>
@@ -201,14 +220,14 @@ export default function UrbanSweetsHomePage() {
       {/* Featured Restaurant Spotlight */}
       <section id="restaurant" className="py-20 bg-[#FAF6F0] border-y border-[#581825]/15 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
+          <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 reveal-up hover-lift transition-all duration-300">
             <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto min-h-[350px]">
               <Image
                 src="/images/urban-sweets/restaurant_dining_2.jpg"
                 alt="Urban Sweets & Bakers Multi-Cuisine Family Restaurant"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute top-4 left-4">
                 <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-[#581825]/90 text-[#DFCA9B] rounded-sm border border-[#DFCA9B]/30">
@@ -253,10 +272,10 @@ export default function UrbanSweetsHomePage() {
               <div className="pt-2 flex flex-wrap gap-4">
                 <Link
                   href="/urban-sweets/sweets-and-bakery#restaurant-menu"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md group"
                 >
                   <span>View Dining Highlights</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/urban-sweets/banquets"
@@ -270,52 +289,52 @@ export default function UrbanSweetsHomePage() {
 
           {/* Restaurant & Food Photography Gallery */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up">
               <Image
                 src="/images/urban-sweets/food_dish_1.jpg"
                 alt="Signature Gravies & Curries"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
                 <span className="text-[11px] font-semibold text-white">Signature North Indian Gravies</span>
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-100">
               <Image
                 src="/images/urban-sweets/restaurant_dining_3.jpg"
                 alt="Warm Dining Room Seating"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
                 <span className="text-[11px] font-semibold text-white">Comfortable Dining Room</span>
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-200">
               <Image
                 src="/images/urban-sweets/food_dish_2.jpg"
                 alt="Chef Specialty Delicacies"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
                 <span className="text-[11px] font-semibold text-white">Authentic Handcrafted Flavors</span>
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+            <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-300">
               <Image
                 src="/images/urban-sweets/terrace_dining_spread.png"
                 alt="Grand Terrace Feast Spread"
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
                 <span className="text-[11px] font-semibold text-white">Lavish Dining Spread</span>
@@ -336,10 +355,12 @@ export default function UrbanSweetsHomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {urbanSweetsData.offerings.map((offering) => (
+            {urbanSweetsData.offerings.map((offering, idx) => (
               <div
                 key={offering.id}
-                className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-lg flex flex-col justify-between group hover:border-[#DFCA9B]/70 transition-all duration-300"
+                className={`bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-lg flex flex-col justify-between group hover:border-[#DFCA9B]/70 hover-lift reveal-up transition-all duration-300 ${
+                  idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""
+                }`}
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
@@ -374,10 +395,10 @@ export default function UrbanSweetsHomePage() {
                   <div className="pt-2">
                     <Link
                       href={offering.route}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
+                      className="group/link inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
                     >
                       <span>Explore {offering.title}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                     </Link>
                   </div>
                 </div>
@@ -389,14 +410,14 @@ export default function UrbanSweetsHomePage() {
 
       {/* Banquet Spotlight */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12">
+        <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 reveal-up hover-lift transition-all duration-300">
           <div className="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto min-h-[360px]">
             <Image
               src="/images/urban-sweets/banquet_hall_2.jpg"
               alt="Urban Sweets Celebration Banquet"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
 
@@ -419,10 +440,10 @@ export default function UrbanSweetsHomePage() {
             <div className="pt-2">
               <Link
                 href="/urban-sweets/banquets"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md"
+                className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md group"
               >
                 <span>View Banquet Venue Details</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -430,49 +451,49 @@ export default function UrbanSweetsHomePage() {
 
         {/* Banquet Venue Photo Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up">
             <Image
               src="/images/urban-sweets/banquet_hall_1.jpg"
               alt="Banquet Grand View"
               fill
               sizes="(max-width: 768px) 50vw, 25vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
               <span className="text-[11px] font-semibold text-white">Grand Celebration Hall</span>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-100">
             <Image
               src="/images/urban-sweets/banquet_setup_1.jpg"
               alt="Banquet Stage & Seating"
               fill
               sizes="(max-width: 768px) 50vw, 25vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
               <span className="text-[11px] font-semibold text-white">Royal Seating Arrangements</span>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-200">
             <Image
               src="/images/urban-sweets/banquet_hall_3.jpg"
               alt="Crystal Chandelier Ambience"
               fill
               sizes="(max-width: 768px) 50vw, 25vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
               <span className="text-[11px] font-semibold text-white">Crystal Chandeliers</span>
             </div>
           </div>
-          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group">
+          <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-md group hover-lift reveal-up delay-300">
             <Image
               src="/images/urban-sweets/banquet_hall_4.jpg"
               alt="Intimate Dining Ambience"
               fill
               sizes="(max-width: 768px) 50vw, 25vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
               <span className="text-[11px] font-semibold text-white">Milestone Gatherings</span>
@@ -492,7 +513,7 @@ export default function UrbanSweetsHomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 transition-all">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 hover-lift reveal-up transition-all">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/images/urban-sweets/luxury_gift_box_1.png"
@@ -519,16 +540,16 @@ export default function UrbanSweetsHomePage() {
                 <div className="pt-2">
                   <Link
                     href="/urban-sweets/sweets-and-bakery#hampers"
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
+                    className="group/link inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
                   >
                     <span>View Gifting Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 transition-all">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl flex flex-col group hover:border-[#DFCA9B]/70 hover-lift reveal-up delay-150 transition-all">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/images/urban-sweets/luxury_gift_box_2.png"
@@ -555,10 +576,10 @@ export default function UrbanSweetsHomePage() {
                 <div className="pt-2">
                   <Link
                     href="/urban-sweets/sweets-and-bakery#hampers"
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
+                    className="group/link inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-colors"
                   >
                     <span>Request Hamper Proposal</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -568,7 +589,7 @@ export default function UrbanSweetsHomePage() {
       </section>
 
       {/* Online Enquiry Form */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           title="Urban Sweets & Bakers Enquiries"
           subtitle="Place bulk gifting enquiries, custom celebration cake requests, restaurant reservations, or reserve our private celebration banquet hall."

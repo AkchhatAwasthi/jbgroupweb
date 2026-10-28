@@ -30,7 +30,7 @@ export default function SweetsAndBakeryPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -51,10 +51,10 @@ export default function SweetsAndBakeryPage() {
         {/* Bottom: Minimal Punchy Title */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="space-y-2 max-w-2xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block animate-fadeIn">
               Culinary &amp; Artisanal Atelier • Lucknow
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md animate-fadeInUp">
               Restaurant Dining, Artisanal Sweets &amp; Bakery
             </h1>
           </div>
@@ -62,7 +62,7 @@ export default function SweetsAndBakeryPage() {
       </section>
 
       {/* Content Integrity / Placeholder Notice */}
-      <section className="bg-amber-50 border-b border-amber-200 py-4 px-4 text-xs text-amber-900">
+      <section className="bg-amber-50 border-b border-amber-200 py-4 px-4 text-xs text-amber-900 reveal-up">
         <div className="max-w-5xl mx-auto flex items-start sm:items-center gap-3">
           <Info className="w-4 h-4 text-amber-700 shrink-0 mt-0.5 sm:mt-0" />
           <p className="leading-relaxed">
@@ -77,7 +77,7 @@ export default function SweetsAndBakeryPage() {
           <div
             key={category.id}
             id={category.id}
-            className="scroll-mt-28 space-y-10"
+            className="scroll-mt-28 space-y-10 reveal-up"
           >
             {/* Category Header */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-black/10 pb-8">
@@ -96,13 +96,13 @@ export default function SweetsAndBakeryPage() {
                 </p>
               </div>
 
-              <div className="lg:col-span-5 relative aspect-[16/9] rounded-sm overflow-hidden shadow-lg">
+              <div className="lg:col-span-5 relative aspect-[16/9] rounded-sm overflow-hidden shadow-lg hover-lift group">
                 <Image
                   src={category.image}
                   alt={category.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -112,7 +112,8 @@ export default function SweetsAndBakeryPage() {
               {category.sampleItems.map((item, itemIdx) => (
                 <div
                   key={itemIdx}
-                  className="bg-white border border-[#E7DFD1] p-6 rounded-sm shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4"
+                  className="bg-white border border-[#E7DFD1] hover:border-[#581825]/50 p-6 rounded-sm shadow-sm hover:shadow-xl hover-lift reveal-up transition-all duration-500 flex flex-col justify-between space-y-4"
+                  style={{ transitionDelay: `${itemIdx * 80}ms` }}
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -166,14 +167,14 @@ export default function SweetsAndBakeryPage() {
           </p>
           {/* Luxury Gifting Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 text-left">
-            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl group">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl hover-lift reveal-left group">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/images/urban-sweets/luxury_gift_box_1.png"
                   alt="Royal Velvet Heritage Box"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-5">
@@ -185,14 +186,14 @@ export default function SweetsAndBakeryPage() {
               </div>
             </div>
 
-            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl group">
+            <div className="bg-[#3D0F18] border border-[#DFCA9B]/30 rounded-sm overflow-hidden shadow-xl hover-lift reveal-right group">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/images/urban-sweets/luxury_gift_box_2.png"
                   alt="Festive Jewel Drawer Hamper"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="p-5">
@@ -208,10 +209,10 @@ export default function SweetsAndBakeryPage() {
           <div className="pt-4">
             <a
               href="#enquire"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#DFCA9B] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-xl"
+              className="btn-shine inline-flex items-center gap-2 px-8 py-3.5 bg-[#DFCA9B] text-[#3D0F18] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-xl hover:scale-[1.02] active:scale-[0.98] group"
             >
               <span>Request Gifting Catalogue & Proposal</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#3D0F18] group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>

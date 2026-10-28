@@ -24,9 +24,9 @@ export default function SectionHeading({
       : "text-left";
 
   return (
-    <div className={`max-w-3xl mb-12 sm:mb-16 ${alignClass}`}>
+    <div className={`max-w-3xl mb-12 sm:mb-16 reveal-up ${alignClass}`}>
       {eyebrow && (
-        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B] block mb-3">
+        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B] block mb-3 animate-fadeIn">
           {eyebrow}
         </span>
       )}
@@ -38,7 +38,7 @@ export default function SectionHeading({
         {title}
       </h2>
       <div
-        className={`h-0.5 w-16 bg-[#C4A46B] my-4 ${
+        className={`h-0.5 w-16 bg-[#C4A46B] my-4 transition-all duration-700 ease-out ${
           align === "center" ? "mx-auto" : align === "right" ? "ml-auto" : ""
         }`}
       />

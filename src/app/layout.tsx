@@ -65,6 +65,9 @@ export const metadata: Metadata = {
   },
 };
 
+import ScrollAnimator from "@/components/ScrollAnimator";
+import ScrollToTop from "@/components/ScrollToTop";
+
 export const viewport: Viewport = {
   themeColor: "#252522",
   width: "device-width",
@@ -79,10 +82,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${manrope.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${manrope.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans bg-[#F7F3EB] text-[#252522]">
+        <ScrollAnimator />
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

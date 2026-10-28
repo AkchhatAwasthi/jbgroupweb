@@ -32,7 +32,7 @@ export default function UrbanSweetsBanquetsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -53,10 +53,10 @@ export default function UrbanSweetsBanquetsPage() {
         {/* Bottom: Minimal Punchy Title */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="space-y-2 max-w-2xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block animate-fadeIn">
               Private Celebrations Venue • Urban Sweets
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF6F0] leading-tight drop-shadow-md animate-fadeInUp">
               An Intimate Banquet for Life&apos;s Cherished Milestones
             </h1>
           </div>
@@ -64,7 +64,7 @@ export default function UrbanSweetsBanquetsPage() {
       </section>
 
       {/* Verification Notice */}
-      <section className="bg-amber-50 border-b border-amber-200 py-4 px-4 text-xs text-amber-900">
+      <section className="bg-amber-50 border-b border-amber-200 py-4 px-4 text-xs text-amber-900 reveal-up">
         <div className="max-w-5xl mx-auto flex items-start sm:items-center gap-3">
           <Info className="w-4 h-4 text-amber-700 shrink-0 mt-0.5 sm:mt-0" />
           <p className="leading-relaxed">
@@ -76,17 +76,17 @@ export default function UrbanSweetsBanquetsPage() {
       {/* Venue Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+          <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl hover-lift reveal-left group">
             <Image
               src="/images/urban-sweets/banquet_hall_1.jpg"
               alt="Urban Sweets Banquet Hall Setting"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
 
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 reveal-right">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#581825]">
               Atmosphere & Setting
             </span>
@@ -114,10 +114,10 @@ export default function UrbanSweetsBanquetsPage() {
             <div className="pt-2">
               <a
                 href="#enquire"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md"
+                className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#581825] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] group"
               >
                 <span>Check Date Availability</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>

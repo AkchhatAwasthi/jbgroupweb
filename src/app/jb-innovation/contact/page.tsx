@@ -25,15 +25,17 @@ export default function InnovationContactPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-[#2D3025] text-[#F7F3EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs
-            items={[
-              { label: "JB Innovation", href: "/jb-innovation" },
-              { label: "Contact & Location" },
-            ]}
-            theme="charcoal"
-          />
+          <div className="animate-fadeIn">
+            <Breadcrumbs
+              items={[
+                { label: "JB Innovation", href: "/jb-innovation" },
+                { label: "Contact & Location" },
+              ]}
+              theme="charcoal"
+            />
+          </div>
 
-          <div className="max-w-3xl mt-6 space-y-4">
+          <div className="max-w-3xl mt-6 space-y-4 animate-fadeInUp">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
               Wedding & Event Desks
             </span>
@@ -51,8 +53,8 @@ export default function InnovationContactPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Verified Details & Map */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md space-y-6">
+          <div className="lg:col-span-5 space-y-8 reveal-left">
+            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md space-y-6 hover-lift transition-all duration-300 hover:border-[#C4A46B]">
               <h3 className="font-serif text-2xl font-bold text-[#252522] border-b border-black/10 pb-4">
                 Verified Contact Details
               </h3>
@@ -138,23 +140,23 @@ export default function InnovationContactPage() {
             </div>
 
             {/* Authentic Map Graphic from Brochure */}
-            <div className="bg-white border border-[#E7DFD1] p-4 rounded-sm shadow-md space-y-2">
+            <div className="bg-white border border-[#E7DFD1] p-4 rounded-sm shadow-md space-y-2 hover-lift transition-all duration-300">
               <span className="text-xs font-bold uppercase tracking-wider text-[#73765B] block px-2 pt-1">
                 Property Route Map (from Brochure)
               </span>
-              <div className="relative aspect-[16/10] rounded overflow-hidden border border-[#E7DFD1]">
+              <div className="relative aspect-[16/10] rounded overflow-hidden border border-[#E7DFD1] group">
                 <Image
                   src="/images/innovation/location_map.png"
                   alt="JB Innovation Map & Distances from brochure"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>
 
             {/* WhatsApp Direct Chat */}
-            <div className="p-6 bg-[#25D366]/10 border border-[#25D366]/40 rounded-sm space-y-2">
+            <div className="p-6 bg-[#25D366]/10 border border-[#25D366]/40 rounded-sm space-y-2 hover-lift transition-all duration-300">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1e964b] block">
                 Instant WhatsApp Concierge
               </span>
@@ -168,7 +170,7 @@ export default function InnovationContactPage() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white rounded text-xs font-bold uppercase tracking-wider hover:bg-[#20ba59] transition-colors"
+                  className="btn-shine inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white rounded text-xs font-bold uppercase tracking-wider hover:bg-[#20ba59] transition-colors shadow-sm"
                 >
                   <span>Chat on WhatsApp (+91 7080888803)</span>
                 </a>
@@ -177,7 +179,7 @@ export default function InnovationContactPage() {
           </div>
 
           {/* Right Column: Enquiry Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 reveal-right">
             <EnquiryForm
               title="Plan Your Celebration at JB Innovation"
               subtitle="Submit your requirements below for wedding dates, lawn setup quotes, room accommodation blocks, or Carnations dining reservations."

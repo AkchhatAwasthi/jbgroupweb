@@ -31,13 +31,13 @@ export default function UrbanSweetsContactPage() {
           />
 
           <div className="max-w-3xl mt-6 space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block animate-fadeIn">
               Artisanal Concierge
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF6F0] leading-tight animate-fadeInUp">
               Connect with Our Culinary Team
             </h1>
-            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed">
+            <p className="text-base sm:text-lg text-[#E7DFD1]/80 font-light leading-relaxed animate-fadeInUp delay-100">
               We welcome your enquiries for bespoke wedding sweet boxes, corporate festive gifting trunks, daily bakery curations, and private banquet celebrations.
             </p>
           </div>
@@ -48,8 +48,8 @@ export default function UrbanSweetsContactPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Official Notice & Details */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md space-y-6">
+          <div className="lg:col-span-5 space-y-6 reveal-left">
+            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm shadow-md hover-lift transition-all duration-300 space-y-6">
               <h3 className="font-serif text-2xl font-bold text-[#252522] border-b border-black/10 pb-4">
                 Atelier Communications
               </h3>
@@ -114,7 +114,7 @@ export default function UrbanSweetsContactPage() {
           </div>
 
           {/* Right Column: Form */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 reveal-right">
             <EnquiryForm
               title="Send an Enquiry to Urban Sweets & Bakers"
               subtitle="Fill in your details for custom wedding sweet platters, festive gift hamper catalog requests, or banquet reservations."

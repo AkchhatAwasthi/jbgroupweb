@@ -25,14 +25,14 @@ export default function InnovationDiningPage() {
       {/* Hero */}
       <section className="relative min-h-[52vh] sm:min-h-[60vh] flex flex-col justify-between overflow-hidden bg-[#1F2119] text-[#F7F3EB]">
         {/* Full Visibility Hero Image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/images/innovation/carnations_restaurant.png"
             alt="Carnations Restaurant at JB Innovation"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom transition-transform duration-1000"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -40,7 +40,7 @@ export default function InnovationDiningPage() {
         </div>
 
         {/* Top: Breadcrumb */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 animate-fadeIn">
           <Breadcrumbs
             items={[
               { label: "JB Innovation", href: "/jb-innovation" },
@@ -51,7 +51,7 @@ export default function InnovationDiningPage() {
         </div>
 
         {/* Bottom: Minimal Punchy Title */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10 animate-fadeInUp">
           <div className="space-y-2 max-w-2xl">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
               Refined Dining Destination • JB Innovation
@@ -66,17 +66,17 @@ export default function InnovationDiningPage() {
       {/* Narrative Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl">
+          <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl reveal-left hover-lift">
             <Image
               src="/images/innovation/carnations_restaurant.png"
               alt="Carnations Restaurant Interior Ambience"
               fill
               sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
 
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 reveal-right">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#73765B]">
               The Ambiance
             </span>
@@ -104,10 +104,10 @@ export default function InnovationDiningPage() {
             <div className="pt-2">
               <a
                 href="#enquire"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all shadow-md"
+                className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all shadow-md group"
               >
                 <span>Book Social Gathering / Feast</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#DFCA9B] transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function InnovationDiningPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm space-y-4">
+            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm space-y-4 reveal-up hover-lift transition-all duration-300 hover:border-[#C4A46B]">
               <h3 className="font-serif text-2xl font-bold text-[#252522]">
                 Social Banquets & Feasts
               </h3>
@@ -136,7 +136,7 @@ export default function InnovationDiningPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm space-y-4">
+            <div className="bg-white border border-[#E7DFD1] p-8 rounded-sm space-y-4 reveal-up hover-lift delay-150 transition-all duration-300 hover:border-[#C4A46B]">
               <h3 className="font-serif text-2xl font-bold text-[#252522]">
                 Culinary Integrity
               </h3>
@@ -152,7 +152,7 @@ export default function InnovationDiningPage() {
       </section>
 
       {/* Enquiry Form */}
-      <section id="enquire" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="enquire" className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           initialType="general"
           title="Reserve at Carnations Restaurant"

@@ -29,7 +29,7 @@ export default function AboutPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -46,11 +46,21 @@ export default function AboutPage() {
 
         {/* Bottom: Minimal Punchy Title */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
-          <div className="space-y-2 max-w-2xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
-              The Parent Brand Story • JB Group
-            </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md">
+          <div className="space-y-3 max-w-2xl">
+            <div className="flex items-center gap-3 animate-fadeIn">
+              <Image
+                src="/images/logos/jb_group_logo.png"
+                alt="JB Group Logo"
+                width={48}
+                height={69}
+                className="h-12 w-auto object-contain drop-shadow-md"
+                priority
+              />
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+                The Parent Brand Story • JB Group
+              </span>
+            </div>
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md animate-fadeInUp">
               Hospitality Rooted in Craft, Warmth &amp; Precision
             </h1>
           </div>
@@ -60,10 +70,19 @@ export default function AboutPage() {
       {/* Main Story Narrative */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-6 space-y-6">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
-              Authentic Heritage
-            </span>
+          <div className="lg:col-span-6 space-y-6 reveal-left">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logos/jb_group_logo.png"
+                alt="JB Group Logo"
+                width={44}
+                height={63}
+                className="h-12 w-auto object-contain"
+              />
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
+                Authentic Heritage
+              </span>
+            </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#252522] leading-tight">
               A Culture of Genuine Hospitality and Celebratory Excellence
             </h2>
@@ -80,33 +99,33 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4 reveal-right">
+            <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
               <Image
                 src="/images/skyhilton/rooftop_terrace.png"
                 alt="JB Skyhilton Boutique Hotel"
                 fill
                 sizes="25vw"
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
             <div className="space-y-4 pt-8">
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
+              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
                 <Image
                   src="/images/urban-sweets/sweet_shop_interior_display.png"
                   alt="Urban Sweets Artisanal Confectionery"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl">
+              <div className="relative aspect-square rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
                 <Image
                   src="/images/innovation/crown_hall.png"
                   alt="Crown Hall Banquet"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -127,7 +146,8 @@ export default function AboutPage() {
             {groupOverview.pillars.map((pillar, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-[#E7DFD1] p-6 sm:p-8 rounded-sm shadow-sm hover:shadow-md transition-shadow space-y-3"
+                className="bg-white border border-[#E7DFD1] hover:border-[#C4A46B]/50 p-6 sm:p-8 rounded-sm shadow-sm hover:shadow-xl hover-lift reveal-up transition-all duration-500 space-y-3"
+                style={{ transitionDelay: `${idx * 100}ms` }}
               >
                 <span className="font-serif text-3xl font-bold text-[#C4A46B]">
                   0{idx + 1}
@@ -153,10 +173,11 @@ export default function AboutPage() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {groupOverview.businesses.map((biz) => (
+          {groupOverview.businesses.map((biz, idx) => (
             <div
               key={biz.id}
-              className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md flex flex-col justify-between group"
+              className="bg-white border border-[#E7DFD1] hover:border-[#C4A46B]/50 rounded-sm overflow-hidden shadow-md hover:shadow-2xl hover-lift reveal-up transition-all duration-500 flex flex-col justify-between group"
+              style={{ transitionDelay: `${idx * 150}ms` }}
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -194,10 +215,10 @@ export default function AboutPage() {
                 <div className="pt-2">
                   <Link
                     href={biz.route}
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors group/link"
                   >
                     <span>Explore Business</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1.5 transition-transform duration-300" />
                   </Link>
                 </div>
               </div>

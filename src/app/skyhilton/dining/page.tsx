@@ -34,7 +34,7 @@ export default function SkyhiltonDiningPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -56,22 +56,22 @@ export default function SkyhiltonDiningPage() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
             <div className="space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#CCA08A] block">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#CCA08A] block animate-fadeIn">
                 Gastronomic Excellence • JB Skyhilton
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF7F5] leading-tight drop-shadow-md">
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF7F5] leading-tight drop-shadow-md animate-fadeInUp">
                 Culinary Artistry Across Three Distinct Settings
               </h1>
             </div>
 
-            <div className="flex flex-wrap gap-2 text-xs">
-              <a href="#fine-dine" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all">
+            <div className="flex flex-wrap gap-2 text-xs animate-fadeInUp delay-100">
+              <a href="#fine-dine" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 Fine Dine Restaurant
               </a>
-              <a href="#the-bar" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all">
+              <a href="#the-bar" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 The Bar
               </a>
-              <a href="#cafe" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all">
+              <a href="#cafe" className="px-3.5 py-1.5 bg-black/50 hover:bg-black/70 border border-[#CCA08A]/40 rounded-sm text-[#E5BEA9] font-semibold backdrop-blur-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
                 The Café
               </a>
             </div>
@@ -80,15 +80,15 @@ export default function SkyhiltonDiningPage() {
       </section>
 
       {/* Experience 1: Fine Dine Restaurant (70 PAX) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="fine-dine" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 relative aspect-[16/11] rounded-sm overflow-hidden shadow-2xl">
+          <div className="lg:col-span-6 relative aspect-[16/11] rounded-sm overflow-hidden shadow-2xl hover-lift reveal-left group">
             <Image
               src="/images/skyhilton/restaurant_botanical.png"
               alt="JB Skyhilton Fine Dine Restaurant"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute top-4 left-4">
               <span className="px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-xs font-semibold text-[#DFCA9B] rounded-sm">
@@ -97,7 +97,7 @@ export default function SkyhiltonDiningPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 reveal-right">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C4A46B]">
               <Utensils className="w-4 h-4 text-[#C4A46B]" />
               <span>Fine Dining Restaurant</span>
@@ -139,10 +139,10 @@ export default function SkyhiltonDiningPage() {
       </section>
 
       {/* Experience 2: The Bar (70 PAX) */}
-      <section className="py-24 bg-[#252522] text-[#F7F3EB]">
+      <section id="the-bar" className="py-24 bg-[#252522] text-[#F7F3EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6 order-2 lg:order-1">
+            <div className="lg:col-span-6 space-y-6 order-2 lg:order-1 reveal-left">
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#DFCA9B]">
                 <GlassWater className="w-4 h-4 text-[#C4A46B]" />
                 <span>The Bar • Panoramic Views</span>
@@ -173,31 +173,31 @@ export default function SkyhiltonDiningPage() {
               <div className="pt-2">
                 <a
                   href="#reserve"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all shadow-md"
+                  className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] group"
                 >
                   <span>Plan Private Gathering / Party</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-6 order-1 lg:order-2 grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl">
+            <div className="lg:col-span-6 order-1 lg:order-2 grid grid-cols-2 gap-4 reveal-right">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl hover-lift group">
                 <Image
                   src="/images/skyhilton/bar_wooden_lounge.png"
                   alt="Skyhilton Rooftop Lounge Bar"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl mt-8">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl mt-8 hover-lift group">
                 <Image
                   src="/images/skyhilton/bar_dusk.png"
                   alt="Rooftop Bar at Dusk"
                   fill
                   sizes="25vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -206,15 +206,15 @@ export default function SkyhiltonDiningPage() {
       </section>
 
       {/* Experience 3: Elegant Café (20–25 PAX) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="cafe" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 relative aspect-[16/11] rounded-sm overflow-hidden shadow-2xl">
+          <div className="lg:col-span-6 relative aspect-[16/11] rounded-sm overflow-hidden shadow-2xl hover-lift reveal-left group">
             <Image
               src="/images/skyhilton/cafe_velvet.png"
               alt="JB Skyhilton Elegant Café"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute top-4 left-4">
               <span className="px-3 py-1 bg-[#252522]/90 border border-[#C4A46B]/40 text-xs font-semibold text-[#DFCA9B] rounded-sm">
@@ -223,7 +223,7 @@ export default function SkyhiltonDiningPage() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 reveal-right">
             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#C4A46B]">
               <Coffee className="w-4 h-4 text-[#C4A46B]" />
               <span>Boutique Café</span>
@@ -254,10 +254,10 @@ export default function SkyhiltonDiningPage() {
             <div className="pt-2">
               <a
                 href="#reserve"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all"
+                className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#252522] text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D3D39] transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] group"
               >
                 <span>Book Intimate Café Gathering</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>

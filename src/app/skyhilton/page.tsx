@@ -45,7 +45,7 @@ export default function SkyhiltonHomePage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Top & Bottom Vignettes Only - Center is 100% Clear & Radiant */}
           <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -63,13 +63,23 @@ export default function SkyhiltonHomePage() {
         {/* Bottom: Minimal, High-Impact Visual Anchor */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#CCA08A]/40 text-[11px] tracking-[0.25em] uppercase text-[#E5BEA9] font-medium">
-                <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
-                <span>LDA Colony, Lucknow • Boutique Hotel & Culinary Haven</span>
+            <div className="space-y-4 max-w-2xl">
+              <div className="flex items-center gap-3 animate-fadeIn">
+                <Image
+                  src="/images/logos/jb_skyhilton_logo.png"
+                  alt="JB Skyhilton Logo"
+                  width={60}
+                  height={78}
+                  className="h-14 sm:h-16 w-auto object-contain drop-shadow-md"
+                  priority
+                />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-[#CCA08A]/40 text-[11px] tracking-[0.25em] uppercase text-[#E5BEA9] font-medium">
+                  <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
+                  <span>LDA Colony, Lucknow • Boutique Hotel &amp; Culinary Haven</span>
+                </div>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF7F5] leading-[1.15] drop-shadow-lg">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FAF7F5] leading-[1.15] drop-shadow-lg animate-fadeInUp">
                 Your Stay. Your Celebration.{" "}
                 <span className="italic font-normal font-serif text-[#CCA08A]">
                   Your Skyhilton.
@@ -77,10 +87,10 @@ export default function SkyhiltonHomePage() {
               </h1>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 animate-fadeInUp delay-100">
               <Link
                 href="/skyhilton/rooms"
-                className="px-6 sm:px-7 py-3.5 bg-[#CCA08A] hover:bg-[#DEB5A0] text-[#241119] rounded-sm text-xs font-bold uppercase tracking-widest transition-all shadow-xl flex items-center gap-2"
+                className="btn-shine px-6 sm:px-7 py-3.5 bg-[#CCA08A] hover:bg-[#DEB5A0] text-[#241119] rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-xl hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
               >
                 <Bed className="w-4 h-4" />
                 <span>Book a Room</span>
@@ -88,7 +98,7 @@ export default function SkyhiltonHomePage() {
 
               <Link
                 href="/skyhilton/dining"
-                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2"
               >
                 <Utensils className="w-4 h-4 text-[#CCA08A]" />
                 <span>Dining & Bar</span>
@@ -96,7 +106,7 @@ export default function SkyhiltonHomePage() {
 
               <Link
                 href="/skyhilton/banquets"
-                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all backdrop-blur-md flex items-center gap-2"
+                className="px-6 sm:px-7 py-3.5 bg-black/50 hover:bg-black/70 text-[#FAF7F5] border border-[#CCA08A]/50 rounded-sm text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md flex items-center gap-2"
               >
                 <PartyPopper className="w-4 h-4 text-[#CCA08A]" />
                 <span>Plan an Event</span>
@@ -110,11 +120,20 @@ export default function SkyhiltonHomePage() {
       <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Refined Story & Key Pillars */}
-          <div className="lg:col-span-6 space-y-7">
+          <div className="lg:col-span-6 space-y-7 reveal-left">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#CCA08A]/15 border border-[#CCA08A]/35 text-xs font-semibold uppercase tracking-[0.2em] text-[#9E5E48]">
-                <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
-                <span>Boutique Hotel • Sector B, Bargawan</span>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/logos/jb_skyhilton_logo.png"
+                  alt="JB Skyhilton Emblem"
+                  width={48}
+                  height={63}
+                  className="h-12 w-auto object-contain"
+                />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#CCA08A]/15 border border-[#CCA08A]/35 text-xs font-semibold uppercase tracking-[0.2em] text-[#9E5E48]">
+                  <Sparkles className="w-3.5 h-3.5 text-[#CCA08A]" />
+                  <span>Boutique Hotel • Sector B, Bargawan</span>
+                </div>
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2A141D] leading-[1.15] tracking-tight">
                 A Refined Hospitality Experience, <br />
@@ -128,19 +147,19 @@ export default function SkyhiltonHomePage() {
 
             {/* Sleek 3-Pillar Highlight Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-colors">
+              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-all hover-lift">
                 <span className="text-2xl font-serif font-bold text-[#2A141D] block">27</span>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#A3624D] block mt-0.5">Boutique Rooms</span>
                 <p className="text-[11px] text-[#6E565F] mt-1 leading-snug">Bed & breakfast comfort with express check-in</p>
               </div>
 
-              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-colors">
+              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-all hover-lift delay-100">
                 <span className="text-2xl font-serif font-bold text-[#2A141D] block">70</span>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#A3624D] block mt-0.5">Fine Dine (PAX)</span>
                 <p className="text-[11px] text-[#6E565F] mt-1 leading-snug">Multi-cuisine delights & private dining tables</p>
               </div>
 
-              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-colors">
+              <div className="p-4 rounded-sm bg-[#F6EFEA] border border-[#EADBD5] hover:border-[#CCA08A]/50 transition-all hover-lift delay-200">
                 <span className="text-2xl font-serif font-bold text-[#2A141D] block">70</span>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#A3624D] block mt-0.5">Rooftop Bar</span>
                 <p className="text-[11px] text-[#6E565F] mt-1 leading-snug">Panoramic views, cocktails & ambient nightlife</p>
@@ -163,10 +182,10 @@ export default function SkyhiltonHomePage() {
             <div className="flex flex-wrap items-center gap-4 pt-1">
               <Link
                 href="/skyhilton/rooms"
-                className="px-6 py-3 bg-[#241119] text-[#FAF7F5] hover:bg-[#CCA08A] hover:text-[#241119] transition-all rounded-sm text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-sm"
+                className="btn-shine px-6 py-3 bg-[#241119] text-[#FAF7F5] hover:bg-[#CCA08A] hover:text-[#241119] transition-all rounded-sm text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-sm group"
               >
                 <span>View All 27 Rooms</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/skyhilton/dining"
@@ -179,10 +198,10 @@ export default function SkyhiltonHomePage() {
           </div>
 
           {/* Right Column: Sleek, High-End Bento Image Grid */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 reveal-right">
             <div className="grid grid-cols-12 gap-4">
               {/* Main Feature: Rooftop Lounge / Bar */}
-              <div className="col-span-12 relative aspect-[16/9] rounded-sm overflow-hidden shadow-xl group border border-[#EADBD5]">
+              <div className="col-span-12 relative aspect-[16/9] rounded-sm overflow-hidden shadow-xl group border border-[#EADBD5] hover-lift">
                 <Image
                   src="/images/skyhilton/bar_rooftop_lounge.png"
                   alt="Skyhilton Rooftop Lounge Bar"
@@ -202,7 +221,7 @@ export default function SkyhiltonHomePage() {
               </div>
 
               {/* Sub-Card 1: Deluxe King Suite */}
-              <div className="col-span-6 relative aspect-[4/3] rounded-sm overflow-hidden shadow-lg group border border-[#EADBD5]">
+              <div className="col-span-6 relative aspect-[4/3] rounded-sm overflow-hidden shadow-lg group border border-[#EADBD5] hover-lift delay-150">
                 <Image
                   src="/images/skyhilton/suite_retreat.png"
                   alt="Skyhilton Modern Suite Retreat"
@@ -219,7 +238,7 @@ export default function SkyhiltonHomePage() {
               </div>
 
               {/* Sub-Card 2: Botanical Fine Dine */}
-              <div className="col-span-6 relative aspect-[4/3] rounded-sm overflow-hidden shadow-lg group border border-[#EADBD5]">
+              <div className="col-span-6 relative aspect-[4/3] rounded-sm overflow-hidden shadow-lg group border border-[#EADBD5] hover-lift delay-300">
                 <Image
                   src="/images/skyhilton/restaurant_botanical.png"
                   alt="Skyhilton Fine Dine Restaurant"
@@ -242,7 +261,7 @@ export default function SkyhiltonHomePage() {
       {/* Featured Rooms Showcase - Edge-to-Edge Sleek Redesign */}
       <section className="py-20 bg-[#1A0A11] text-[#FAF7F5] border-y border-[#CCA08A]/25 w-full overflow-hidden">
         {/* Top Header */}
-        <div className="w-full px-4 sm:px-8 lg:px-12 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="w-full px-4 sm:px-8 lg:px-12 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 reveal-up">
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCA08A]">
               <Bed className="w-3.5 h-3.5 text-[#CCA08A]" />
@@ -254,10 +273,10 @@ export default function SkyhiltonHomePage() {
           </div>
           <Link
             href="/skyhilton/rooms"
-            className="text-xs font-bold uppercase tracking-[0.16em] text-[#EBDED8] hover:text-[#CCA08A] inline-flex items-center gap-2 transition-colors border-b border-[#CCA08A]/40 hover:border-[#CCA08A] pb-1 shrink-0"
+            className="group text-xs font-bold uppercase tracking-[0.16em] text-[#EBDED8] hover:text-[#CCA08A] inline-flex items-center gap-2 transition-colors border-b border-[#CCA08A]/40 hover:border-[#CCA08A] pb-1 shrink-0"
           >
             <span>View All Categories &amp; Enquire Tariff</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#CCA08A]" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#CCA08A] transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
 
@@ -277,7 +296,9 @@ export default function SkyhiltonHomePage() {
               return (
                 <div
                   key={room.id}
-                  className="group relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10 hover:border-[#CCA08A]/60 transition-all duration-500 bg-[#28131C] flex flex-col justify-between p-6"
+                  className={`group relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-sm overflow-hidden shadow-2xl border border-white/10 hover:border-[#CCA08A]/60 transition-all duration-500 bg-[#28131C] flex flex-col justify-between p-6 hover-lift reveal-up ${
+                    idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""
+                  }`}
                 >
                   {/* Background Photo */}
                   <Image
@@ -346,7 +367,7 @@ export default function SkyhiltonHomePage() {
 
       {/* Culinary & Nightlife Showcase */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="max-w-3xl mb-12 sm:mb-16 text-center mx-auto">
+        <div className="max-w-3xl mb-12 sm:mb-16 text-center mx-auto reveal-up">
           <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#A3624D] block mb-3">
             Epicurean Experiences
           </span>
@@ -360,10 +381,12 @@ export default function SkyhiltonHomePage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {skyhiltonData.dining.map((item) => (
+          {skyhiltonData.dining.map((item, dIdx) => (
             <div
               key={item.id}
-              className="bg-white border border-[#EADBD5] hover:border-[#CCA08A]/50 rounded-sm overflow-hidden shadow-md flex flex-col justify-between group transition-all duration-300"
+              className={`bg-white border border-[#EADBD5] hover:border-[#CCA08A]/50 rounded-sm overflow-hidden shadow-md flex flex-col justify-between group transition-all duration-300 hover-lift reveal-up ${
+                dIdx === 1 ? "delay-150" : dIdx === 2 ? "delay-300" : ""
+              }`}
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
@@ -393,10 +416,10 @@ export default function SkyhiltonHomePage() {
                 <div className="pt-2 border-t border-black/5">
                   <Link
                     href="/skyhilton/dining"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#2A141D] hover:text-[#CCA08A] transition-colors"
+                    className="group/link inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#2A141D] hover:text-[#CCA08A] transition-colors"
                   >
                     <span>Explore Experience</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -408,7 +431,7 @@ export default function SkyhiltonHomePage() {
       {/* Banquet Spaces Spotlight */}
       <section className="py-20 bg-[#220E17] text-[#FAF7F5] border-t border-[#3B1C28]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-up">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#CCA08A]/15 border border-[#CCA08A]/30 rounded-full mb-3">
                 <PartyPopper className="w-3.5 h-3.5 text-[#CCA08A]" />
@@ -426,19 +449,21 @@ export default function SkyhiltonHomePage() {
             <div className="shrink-0">
               <Link
                 href="/skyhilton/banquets"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-5 py-3 bg-[#CCA08A] text-[#241119] hover:bg-[#DEB5A0] transition-all rounded-sm shadow-md hover:shadow-lg font-semibold"
+                className="btn-shine inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest px-5 py-3 bg-[#CCA08A] text-[#241119] hover:bg-[#DEB5A0] transition-all rounded-sm shadow-md hover:shadow-lg font-semibold group"
               >
                 <span>View Event Packages</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skyhiltonData.banquets.map((venue) => (
+            {skyhiltonData.banquets.map((venue, bIdx) => (
               <div
                 key={venue.id}
-                className="group flex flex-col bg-[#2B141E] border border-white/10 hover:border-[#CCA08A]/60 rounded-sm overflow-hidden transition-all duration-300 hover:shadow-[0_16px_36px_rgba(0,0,0,0.5)] hover:-translate-y-1"
+                className={`group flex flex-col bg-[#2B141E] border border-white/10 hover:border-[#CCA08A]/60 rounded-sm overflow-hidden transition-all duration-300 hover-lift reveal-up ${
+                  bIdx === 1 ? "delay-100" : bIdx === 2 ? "delay-200" : bIdx === 3 ? "delay-300" : ""
+                }`}
               >
                 {/* Visual Image */}
                 <div className="relative aspect-[16/11] overflow-hidden bg-[#180A10]">
@@ -521,19 +546,19 @@ export default function SkyhiltonHomePage() {
 
           {/* Quick Perks Strip */}
           <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm">
+            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm hover-lift reveal-up transition-all">
               <p className="font-serif text-lg sm:text-xl font-bold text-[#CCA08A]">30 to 100</p>
               <p className="text-[11px] uppercase tracking-wider text-[#EBDED8] mt-0.5">Flexible PAX Capacity</p>
             </div>
-            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm">
+            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm hover-lift reveal-up delay-100 transition-all">
               <p className="font-serif text-lg sm:text-xl font-bold text-[#CCA08A]">Big LED Wall</p>
               <p className="text-[11px] uppercase tracking-wider text-[#EBDED8] mt-0.5">AV &amp; Media Integration</p>
             </div>
-            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm">
+            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm hover-lift reveal-up delay-200 transition-all">
               <p className="font-serif text-lg sm:text-xl font-bold text-[#CCA08A]">Live Tandoor</p>
               <p className="text-[11px] uppercase tracking-wider text-[#EBDED8] mt-0.5">Gourmet Banquet Buffets</p>
             </div>
-            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm">
+            <div className="p-3 bg-white/[0.02] border border-white/5 rounded-sm hover-lift reveal-up delay-300 transition-all">
               <p className="font-serif text-lg sm:text-xl font-bold text-[#CCA08A]">Event Concierge</p>
               <p className="text-[11px] uppercase tracking-wider text-[#EBDED8] mt-0.5">End-to-End Planning</p>
             </div>
@@ -542,7 +567,7 @@ export default function SkyhiltonHomePage() {
       </section>
 
       {/* Enquiry Form */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           title="Reserve at JB Skyhilton"
           subtitle="Direct reservations desk for rooms, restaurant tables, and banquet venues at Sector B, Bargawan, LDA Colony, Lucknow."

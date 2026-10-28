@@ -33,7 +33,7 @@ export default function CelebrationsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none" />
@@ -52,24 +52,24 @@ export default function CelebrationsPage() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#DFCA9B] block animate-fadeIn">
                 Celebrations &amp; Landmark Occasions • JB Group
               </span>
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md">
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-tight drop-shadow-md animate-fadeInUp">
                 Where Every Occasion Finds Its Perfect Stage
               </h1>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 animate-fadeInUp delay-100">
               <a
                 href="#all-venues"
-                className="px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all shadow-md"
+                className="btn-shine px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98]"
               >
                 Browse All Venues
               </a>
               <a
                 href="#enquire"
-                className="px-6 py-3 bg-black/50 border border-[#C4A46B]/40 text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-black/70 transition-all backdrop-blur-sm"
+                className="px-6 py-3 bg-black/50 border border-[#C4A46B]/40 text-[#F7F3EB] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-black/70 transition-all duration-300 backdrop-blur-sm hover:scale-[1.02] active:scale-[0.98]"
               >
                 Plan Your Event
               </a>
@@ -87,8 +87,8 @@ export default function CelebrationsPage() {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
-            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-2xl hover:border-[#C4A46B]/60 hover-lift reveal-up transition-all duration-500 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors duration-300">
               <Sparkles className="w-4 h-4" />
             </div>
             <div className="space-y-1">
@@ -110,8 +110,8 @@ export default function CelebrationsPage() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
-            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-2xl hover:border-[#C4A46B]/60 hover-lift reveal-up delay-100 transition-all duration-500 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors duration-300">
               <Calendar className="w-4 h-4" />
             </div>
             <div className="space-y-1">
@@ -133,8 +133,8 @@ export default function CelebrationsPage() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
-            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-2xl hover:border-[#C4A46B]/60 hover-lift reveal-up delay-200 transition-all duration-500 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors duration-300">
               <Users className="w-4 h-4" />
             </div>
             <div className="space-y-1">
@@ -156,8 +156,8 @@ export default function CelebrationsPage() {
             </div>
           </div>
 
-          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-md hover:border-[#C4A46B]/60 transition-all duration-300 space-y-4 group">
-            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors">
+          <div className="bg-white border border-[#E7DFD1] p-6 sm:p-7 rounded-sm shadow-sm hover:shadow-2xl hover:border-[#C4A46B]/60 hover-lift reveal-up delay-300 transition-all duration-500 space-y-4 group">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] border border-[#C4A46B]/30 flex items-center justify-center text-[#C4A46B] group-hover:bg-[#C4A46B] group-hover:text-white transition-colors duration-300">
               <MapPin className="w-4 h-4" />
             </div>
             <div className="space-y-1">

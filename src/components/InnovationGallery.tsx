@@ -182,7 +182,7 @@ export default function InnovationGallery() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Compact Header & Filter Bar */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-white/10 reveal-up">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-[#C4A46B]/30 text-[10px] font-semibold text-[#DFCA9B] tracking-[0.2em] uppercase mb-2">
               <Sparkles className="w-3 h-3 text-[#C4A46B]" />
@@ -204,7 +204,7 @@ export default function InnovationGallery() {
                 }}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 ${
                   activeCategory === cat.id
-                    ? "bg-[#C4A46B] text-[#252522] shadow-md font-bold"
+                    ? "bg-[#C4A46B] text-[#252522] shadow-md font-bold scale-105"
                     : "bg-white/5 text-[#E7DFD1]/70 hover:bg-white/10 hover:text-white border border-white/10"
                 }`}
               >
@@ -220,7 +220,7 @@ export default function InnovationGallery() {
             <div
               key={item.src + index}
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[16/11] rounded-sm overflow-hidden bg-black/40 border border-white/10 shadow-lg cursor-pointer hover:border-[#C4A46B]/60 transition-all duration-500"
+              className="group relative aspect-[16/11] rounded-sm overflow-hidden bg-black/40 border border-white/10 shadow-lg cursor-pointer hover:border-[#C4A46B]/60 transition-all duration-500 hover-lift reveal-up"
             >
               <Image
                 src={item.src}
@@ -241,7 +241,7 @@ export default function InnovationGallery() {
                 </div>
               )}
 
-              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 backdrop-blur-md p-2 rounded-sm text-white">
+              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-105 bg-black/60 backdrop-blur-md p-2 rounded-sm text-white">
                 <Maximize2 className="w-3.5 h-3.5 text-[#DFCA9B]" />
               </div>
 
@@ -252,7 +252,7 @@ export default function InnovationGallery() {
                 <h3 className="font-serif text-base sm:text-lg font-bold text-[#F7F3EB] group-hover:text-[#DFCA9B] transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-[11px] text-[#E7DFD1]/70 font-light line-clamp-1 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                <p className="text-[11px] text-[#E7DFD1]/70 font-light line-clamp-1 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.caption}
                 </p>
               </div>
@@ -262,10 +262,10 @@ export default function InnovationGallery() {
 
         {/* View All Toggle Button */}
         {filteredItems.length > 6 && (
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 reveal-up">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2.5 rounded-sm bg-white/5 hover:bg-white/10 border border-[#C4A46B]/40 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-all backdrop-blur-sm shadow-md"
+              className="btn-shine px-6 py-2.5 rounded-sm bg-white/5 hover:bg-white/10 border border-[#C4A46B]/40 text-xs font-bold uppercase tracking-widest text-[#DFCA9B] hover:text-white transition-all backdrop-blur-sm shadow-md"
             >
               {showAll ? "Show Less Photos" : `View All Photos (${filteredItems.length})`}
             </button>
@@ -276,12 +276,12 @@ export default function InnovationGallery() {
       {/* Lightbox Modal */}
       {selectedImageIndex !== null && filteredItems[selectedImageIndex] && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
           onClick={closeLightbox}
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-5 right-5 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-all z-50"
+            className="absolute top-5 right-5 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-all z-50 hover:scale-110 active:scale-95"
             aria-label="Close Lightbox"
           >
             <X className="w-6 h-6" />
@@ -289,7 +289,7 @@ export default function InnovationGallery() {
 
           <button
             onClick={prevImage}
-            className="absolute left-4 sm:left-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all z-50"
+            className="absolute left-4 sm:left-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all z-50 hover:scale-110 active:scale-95"
             aria-label="Previous Image"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -297,14 +297,14 @@ export default function InnovationGallery() {
 
           <button
             onClick={nextImage}
-            className="absolute right-4 sm:right-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all z-50"
+            className="absolute right-4 sm:right-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all z-50 hover:scale-110 active:scale-95"
             aria-label="Next Image"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
           <div
-            className="max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center"
+            className="max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center animate-fadeInUp"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative w-full h-[65vh] sm:h-[72vh] rounded-sm overflow-hidden shadow-2xl">

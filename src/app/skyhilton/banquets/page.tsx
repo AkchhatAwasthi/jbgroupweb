@@ -31,7 +31,7 @@ export default function SkyhiltonBanquetsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center scale-105 animate-subtleZoom"
           />
           {/* Subtle Vignettes - Center is 100% Radiant */}
           <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/70 via-black/20 to-transparent pointer-events-none" />
@@ -52,10 +52,10 @@ export default function SkyhiltonBanquetsPage() {
         {/* Bottom: Minimal Punchy Title */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10">
           <div className="space-y-2 max-w-2xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#CCA08A] block">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#CCA08A] block animate-fadeIn">
               Celebrations &amp; Banqueting • JB Skyhilton
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF7F5] leading-tight drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#FAF7F5] leading-tight drop-shadow-md animate-fadeInUp">
               Four Distinct Event Destinations
             </h1>
           </div>
@@ -90,7 +90,7 @@ export default function SkyhiltonBanquetsPage() {
       </section>
 
       {/* Booking Enquiry Section */}
-      <section id="enquire" className="py-24 bg-[#FAF7F2] border-t border-[#E7DFD1] px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="enquire" className="py-24 bg-[#FAF7F2] border-t border-[#E7DFD1] px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           initialType="banquet"
           title="Check Venue Availability at JB Skyhilton"

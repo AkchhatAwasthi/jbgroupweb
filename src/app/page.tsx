@@ -44,26 +44,36 @@ export default function HomePage() {
         {/* Hero Content - Classy Left-Bottom Only */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 pt-32">
           <div className="max-w-xl space-y-3.5">
-            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#DFCA9B] block drop-shadow-sm">
-              Celebrations &amp; Hospitality Crafted Beautifully
-            </span>
+            <div className="flex items-center gap-3 animate-fadeIn">
+              <Image
+                src="/images/logos/jb_group_logo.png"
+                alt="JB Group Emblem"
+                width={50}
+                height={72}
+                className="h-12 sm:h-14 w-auto object-contain drop-shadow-md"
+                priority
+              />
+              <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#DFCA9B] block drop-shadow-sm">
+                Celebrations &amp; Hospitality Crafted Beautifully
+              </span>
+            </div>
 
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-[1.12] drop-shadow-md">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#F7F3EB] leading-[1.12] drop-shadow-md animate-fadeInUp">
               Your Perfect <br />
               <span className="italic font-normal font-serif text-[#DFCA9B]">
                 Event Awaits
               </span>
             </h1>
 
-            <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-[#E7DFD1]/90 drop-shadow">
+            <p className="text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-[#E7DFD1]/90 drop-shadow animate-fadeInUp delay-100">
               Luxury Venues &nbsp;|&nbsp; Exquisite Dining &nbsp;|&nbsp; Memorable Experiences
             </p>
 
             {/* Buttons Directly Below Text - Compact & Refined */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2 animate-fadeInUp delay-200">
               <a
                 href="#businesses"
-                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-[#A37E45] hover:bg-[#8D6B35] text-white rounded-none text-[11px] font-bold uppercase tracking-widest transition-all shadow-md inline-flex items-center gap-2 group"
+                className="btn-shine px-5 sm:px-6 py-2.5 sm:py-3 bg-[#A37E45] hover:bg-[#8D6B35] text-white rounded-none text-[11px] font-bold uppercase tracking-widest transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] inline-flex items-center gap-2 group"
               >
                 <span>Explore Our Venues</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -71,7 +81,7 @@ export default function HomePage() {
 
               <a
                 href="#celebrations-form"
-                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-black/40 hover:bg-black/60 text-[#F7F3EB] border border-[#C4A46B]/40 rounded-none text-[11px] font-bold uppercase tracking-widest transition-all backdrop-blur-md inline-flex items-center gap-2"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-black/40 hover:bg-black/60 text-[#F7F3EB] border border-[#C4A46B]/40 rounded-none text-[11px] font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md inline-flex items-center gap-2"
               >
                 <span>Plan Your Celebration</span>
               </a>
@@ -84,8 +94,8 @@ export default function HomePage() {
       <section className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Visual Showcase - Real Photography Trio */}
-          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
-            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4 reveal-left">
+            <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
               <Image
                 src="/images/skyhilton/rooftop_terrace.png"
                 alt="JB Skyhilton Boutique Hotel & Rooftops"
@@ -101,7 +111,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4">
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
                 <Image
                   src="/images/urban-sweets/sweet_shop_interior_display.png"
                   alt="Urban Sweets Artisanal Mithai Atelier"
@@ -116,7 +126,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] group">
+              <div className="relative aspect-[16/10] rounded-sm overflow-hidden shadow-xl border border-[#E7DFD1] hover-lift group">
                 <Image
                   src="/images/innovation/DSC_2803.jpg"
                   alt="JB Innovation Crown Hall Grand Ballroom"
@@ -134,12 +144,21 @@ export default function HomePage() {
           </div>
 
           {/* Story Text - Concise & Meaningful */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2">
-              <span className="w-6 h-[1.5px] bg-[#C4A46B]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
-                The Parent Brand
-              </span>
+          <div className="lg:col-span-6 space-y-6 reveal-right">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logos/jb_group_logo.png"
+                alt="JB Group Logo"
+                width={40}
+                height={57}
+                className="h-10 w-auto object-contain"
+              />
+              <div className="inline-flex items-center gap-2">
+                <span className="w-6 h-[1.5px] bg-[#C4A46B]" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
+                  The Parent Brand
+                </span>
+              </div>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#252522] leading-tight">
@@ -152,15 +171,15 @@ export default function HomePage() {
 
             {/* 3 Core Highlight Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm">
+              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm hover-lift transition-all duration-300 hover:border-[#C4A46B]/40">
                 <span className="font-serif text-lg font-bold text-[#252522] block">Boutique Stays</span>
                 <span className="text-[11px] text-[#73765B] block mt-0.5">27 Keys &amp; Sky Bar</span>
               </div>
-              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm">
+              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm hover-lift transition-all duration-300 hover:border-[#C4A46B]/40">
                 <span className="font-serif text-lg font-bold text-[#252522] block">Gastronomy</span>
                 <span className="text-[11px] text-[#73765B] block mt-0.5">Pure Desi Ghee &amp; Bakery</span>
               </div>
-              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm">
+              <div className="p-3 bg-white border border-[#E7DFD1] rounded-sm shadow-sm hover-lift transition-all duration-300 hover:border-[#C4A46B]/40">
                 <span className="font-serif text-lg font-bold text-[#252522] block">Celebrations</span>
                 <span className="text-[11px] text-[#73765B] block mt-0.5">Halls, Lawns &amp; Terrace</span>
               </div>
@@ -169,10 +188,10 @@ export default function HomePage() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors border-b border-[#252522] hover:border-[#C4A46B] pb-1"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors border-b border-[#252522] hover:border-[#C4A46B] pb-1 group"
               >
                 <span>Read Full Parent Story</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -192,7 +211,7 @@ export default function HomePage() {
           <div className="space-y-16 mt-14">
             {/* Business 1: JB Skyhilton */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group border border-white/10">
+              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group border border-white/10 hover-lift reveal-left">
                 <Image
                   src="/images/skyhilton/rooftop_terrace.png"
                   alt="JB Skyhilton Boutique Hotel"
@@ -219,7 +238,24 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 space-y-4">
+              <div className="lg:col-span-5 space-y-4 reveal-right">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/logos/jb_skyhilton_logo.png"
+                    alt="JB Skyhilton Logo"
+                    width={45}
+                    height={59}
+                    className="h-12 w-auto object-contain drop-shadow"
+                  />
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C4A46B] block">
+                      Sector B, LDA Colony, Lucknow
+                    </span>
+                    <h3 className="font-serif text-2xl font-bold text-[#F7F3EB]">
+                      JB Skyhilton
+                    </h3>
+                  </div>
+                </div>
                 <span className="text-xs font-serif italic text-[#C4A46B] text-lg block">
                   “Your Stay. Your Celebration. Your Skyhilton.”
                 </span>
@@ -243,7 +279,7 @@ export default function HomePage() {
                 <div className="pt-2">
                   <Link
                     href="/skyhilton"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all shadow-md group"
+                    className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#C4A46B] text-[#252522] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#DFCA9B] transition-all duration-300 shadow-md group hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>Explore JB Skyhilton</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -254,7 +290,24 @@ export default function HomePage() {
 
             {/* Business 2: Urban Sweets & Bakers (Inverted Layout) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-              <div className="lg:col-span-5 space-y-4 order-2 lg:order-1">
+              <div className="lg:col-span-5 space-y-4 order-2 lg:order-1 reveal-left">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/logos/jb_urban_sweets_logo.png"
+                    alt="Urban Sweets & Bakers Logo"
+                    width={60}
+                    height={38}
+                    className="h-10 w-auto object-contain drop-shadow"
+                  />
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#DFCA9B] block">
+                      Restaurant &amp; Artisanal Sweets
+                    </span>
+                    <h3 className="font-serif text-2xl font-bold text-[#F7F3EB]">
+                      Urban Sweets &amp; Bakers
+                    </h3>
+                  </div>
+                </div>
                 <span className="text-xs font-serif italic text-[#DFCA9B] text-lg block">
                   “Restaurant, Artisanal Sweets &amp; Celebration Banquets.”
                 </span>
@@ -278,7 +331,7 @@ export default function HomePage() {
                 <div className="pt-2">
                   <Link
                     href="/urban-sweets"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#581825] border border-[#DFCA9B] text-[#FAF6F0] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all shadow-md group"
+                    className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#581825] border border-[#DFCA9B] text-[#FAF6F0] rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#3D0F18] transition-all duration-300 shadow-md group hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>Explore Urban Sweets &amp; Bakers</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -286,7 +339,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group order-1 lg:order-2 border border-white/10">
+              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group order-1 lg:order-2 border border-white/10 hover-lift reveal-right">
                 <Image
                   src="/images/urban-sweets/restaurant_dining_1.jpg"
                   alt="Urban Sweets &amp; Bakers Family Restaurant"
@@ -316,7 +369,7 @@ export default function HomePage() {
 
             {/* Business 3: JB Innovation */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
-              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group border border-white/10">
+              <div className="lg:col-span-7 relative aspect-[16/10] rounded-sm overflow-hidden shadow-2xl group border border-white/10 hover-lift reveal-left">
                 <Image
                   src="/images/innovation/grand_jali_entrance.png"
                   alt="JB Innovation Grand Jali Palace Facade"
@@ -345,7 +398,24 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 space-y-4">
+              <div className="lg:col-span-5 space-y-4 reveal-right">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/images/logos/jb_innovations_logo.png"
+                    alt="JB Innovation Logo"
+                    width={45}
+                    height={57}
+                    className="h-12 w-auto object-contain drop-shadow"
+                  />
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C4A46B] block">
+                      Weddings &amp; Grand Events • Lucknow
+                    </span>
+                    <h3 className="font-serif text-2xl font-bold text-[#F7F3EB]">
+                      JB Innovation
+                    </h3>
+                  </div>
+                </div>
                 <span className="text-xs font-serif italic text-[#C4A46B] text-lg block">
                   “Where Every Celebration Finds Its Setting.”
                 </span>
@@ -369,7 +439,7 @@ export default function HomePage() {
                 <div className="pt-2">
                   <Link
                     href="/jb-innovation"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all shadow-md group"
+                    className="btn-shine inline-flex items-center gap-2 px-6 py-3 bg-[#73765B] text-white rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-[#5C5F47] transition-all duration-300 shadow-md group hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>Explore JB Innovation</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -394,7 +464,8 @@ export default function HomePage() {
             <Link
               key={idx}
               href={exp.route}
-              className="bg-white border border-[#E7DFD1] hover:border-[#C4A46B]/60 rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white border border-[#E7DFD1] hover:border-[#C4A46B]/60 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl hover-lift reveal-up transition-all duration-500 flex flex-col justify-between group"
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-[#252522]">
                 <Image
@@ -424,7 +495,7 @@ export default function HomePage() {
 
                 <div className="pt-2 border-t border-[#E7DFD1] flex items-center justify-between text-xs font-semibold text-[#252522] group-hover:text-[#C4A46B] transition-colors">
                   <span>Explore Offering</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </div>
               </div>
             </Link>
@@ -453,7 +524,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal-up">
           <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C4A46B]">
             Weddings • Milestones • Corporate
           </span>
@@ -467,13 +538,13 @@ export default function HomePage() {
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/celebrations"
-              className="px-8 py-3.5 bg-[#C4A46B] text-[#252522] text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-[#DFCA9B] transition-all shadow-xl"
+              className="btn-shine px-8 py-3.5 bg-[#C4A46B] text-[#252522] text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-[#DFCA9B] transition-all duration-300 shadow-xl hover:scale-[1.02] active:scale-[0.98]"
             >
               View Venue Directory
             </Link>
             <a
               href="#celebrations-form"
-              className="px-8 py-3.5 bg-white/10 border border-[#C4A46B]/40 text-[#F7F3EB] text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-white/20 transition-all backdrop-blur-sm"
+              className="px-8 py-3.5 bg-white/10 border border-[#C4A46B]/40 text-[#F7F3EB] text-xs font-bold uppercase tracking-widest rounded-sm hover:bg-white/20 transition-all duration-300 backdrop-blur-sm hover:scale-[1.02] active:scale-[0.98]"
             >
               Request Proposal
             </a>
@@ -482,7 +553,7 @@ export default function HomePage() {
       </section>
 
       {/* Section 6: Central Reservations & Enquiry Hub */}
-      <section id="celebrations-form" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="celebrations-form" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto reveal-up">
         <EnquiryForm
           title="Direct Group Reservations &amp; Event Concierge"
           subtitle="Submit your details below. Our central reservations team connects you directly with the dedicated event and room managers across JB Skyhilton, Urban Sweets &amp; Bakers, and JB Innovation."

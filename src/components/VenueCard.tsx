@@ -31,7 +31,7 @@ export default function VenueCard({
   accentColor = "#C4A46B",
 }: VenueCardProps) {
   return (
-    <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col group">
+    <div className="bg-white border border-[#E7DFD1] rounded-sm overflow-hidden shadow-md hover:shadow-2xl hover-lift reveal-up transition-all duration-500 flex flex-col group hover:border-[#C4A46B]/40">
       {/* Visual Image with subtle hover zoom */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#252522]">
         <Image
@@ -106,10 +106,10 @@ export default function VenueCard({
         <div className="pt-4 border-t border-black/5 flex items-center justify-between">
           <Link
             href={enquireHref}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#252522] hover:text-[#C4A46B] transition-colors group/link"
           >
             <span>Enquire Venue</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#C4A46B] group-hover/link:translate-x-1.5 transition-transform duration-300" />
           </Link>
           <span className="text-[11px] text-[#73765B]">Verified Setting</span>
         </div>
